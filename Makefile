@@ -5,4 +5,7 @@ ops-manual.pdf: ops-manual.tex chapters/*.tex
 .PHONY: clean
 
 clean:
-	-rm -f 
+	-rm -f ops-manual.pdf
+	-rm -f *.{log,aux,out}
+	-rm -f chapters/*.{log,aux,out}
+
