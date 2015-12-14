@@ -1,6 +1,8 @@
 
 ops-manual.pdf: ops-manual.tex chapters/*.tex
 	xelatex $^
+	xelatex $^
+
 
 .PHONY: clean
 
