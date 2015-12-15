@@ -1,0 +1,125 @@
+digraph {
+	####### Node declarations
+	### Highest-level
+	trustees [label="Trustees"];
+	
+	### Second level
+	comp_prog_coord [label="Competition Programme Coordinator"];
+	fund_coord [label="Fundraising Coordinator"];
+	treasurers [label="Treasurers"];
+	pr_coord [label="PR Coordinator"];
+	internet_owner [label="Internet Owner"];
+	welfare_coord [label="Welfare Coordinator"];
+	
+	### Third Level
+	
+	# Competition Coordinator Subordinates
+	comp_event_coord [label="Competition Event Coordinator"];
+	game_design_coord [label="Game Design Coordinator"];
+	kickstart_event_coord [label="Kickstart Events Coordinator"];
+	team_coord [label="Team Coordinator"];
+	kit [label="Kit Coordinator"];
+	
+	# Fundraising Coordinator Subordinates
+	fund_volunteers [label="Fundraising Volunteers"];
+	
+	# PR Coordinator Subordinates
+	pr_web_tech [label="PR Web Tech" fillcolor=yellow style=filled];
+	graphic_design [label="Graphic Design" fillcolor=yellow style=filled];
+	
+	# Welfare Coordinator Subordinates
+	volunteer_recruitment_coord[label="Volunteer Recruitment Coordinator"];
+	
+	### Fourth Level
+	
+	# Competition Event Coordinator Subordinates
+	reward_manager[label="Reward Manager"];
+	comp_volunteer_welfare[label="Competition Volunteer Welfare Coordinator"];
+	prod_manager[label="Production Manager"];
+	comp_team_coord[label="Competition Team Coordinator"];
+	comp_game_vol_coord[label="Game Volunteer Coordinator"];
+	comp_sw_ops_coord[label="Competition Software Operations Coordinator"];
+	comp_team_support[label="Competition Team Support Coordinator"];
+	comp_hs_coord[label="Competition H&S Coordinator"];
+	
+	# Kickstart Event Coordinator Subordinates
+	local_ks_event_coord[label="Local Kickstart Event Coordinator"];
+	local_activity_coord[label="Local Activity Coordinator"];
+	
+	local_team_coord[label="Local Team Coordinator"];
+
+	game_design_volunteers[label="Game Design Volunteers"];
+
+	# Kit Coordinator Subordinates
+	kit_dev[label="Dev" fillcolor=yellow style=filled];
+	kit_manu[label="Manu" fillcolor=yellow style=filled];
+	kit_prod[label="Prod" fillcolor=yellow style=filled];
+	
+	### Fifth Level
+	local_presenter[label="Local Presenter"];
+	local_ks_volunteers[label="Local Kickstart Volunteers"];
+	local_activity_volunteers[label="Local Activity Volunteers"];
+	
+	mentors[label="Mentors"];
+	
+	# Competition Team Coordinator Subordinates
+	kit_collection_manager[label="Kit Collection Manager"];
+	receptionist[label="Receptionist"];
+	
+	# Kit Prod Subordinates
+	kit_ops[label="Ops" fillcolor=yellow style=filled];
+	kit_shipping[label="Shipping" fillcolor=yellow style=filled];
+	kit_support[label="Support" fillcolor=yellow style=filled];
+	
+	# Production Manager Subordinates
+	venue[label="Venue" fillcolor=grey style=filled];
+	contractors[label="Contractors" fillcolor=grey style=filled];
+	arena_wranglers[label="Arena Wranglers"];
+	pits_wranglers[label="Pits Wranglers"];
+	
+	# Game Volunteer Coordinator Subordinates
+	head_shepherd[label="Head Shepherd"];
+	commentators[label="Commentators"];
+	linesmen[label="Linesmen"];
+	judges[label="Judges"];
+	
+	### Sixth Level
+	shepherds[label="Shepherds"];
+	
+	
+	###### Connections between nodes
+	
+	trustees -> { comp_prog_coord fund_coord treasurers pr_coord internet_owner welfare_coord };
+	comp_prog_coord -> { comp_event_coord game_design_coord kickstart_event_coord team_coord kit };
+	
+	pr_coord -> { pr_web_tech graphic_design };
+	welfare_coord -> { volunteer_recruitment_coord };
+	fund_coord -> { fund_volunteers };
+	
+	comp_event_coord -> { reward_manager comp_volunteer_welfare
+                prod_manager comp_team_coord comp_game_vol_coord
+		comp_sw_ops_coord comp_team_support comp_hs_coord
+		};
+		
+	comp_team_coord -> { kit_collection_manager receptionist };
+
+	comp_game_vol_coord -> { head_shepherd commentators linesmen judges };
+	
+	prod_manager -> { venue contractors arena_wranglers pits_wranglers };
+
+	kickstart_event_coord -> { local_ks_event_coord local_activity_coord };
+		
+	local_ks_event_coord -> { local_presenter local_ks_volunteers };
+		
+	local_activity_coord -> local_activity_volunteers;
+		
+	team_coord -> local_team_coord;
+	local_team_coord -> mentors;
+		
+	kit -> { kit_dev kit_manu kit_prod };
+	kit_prod -> { kit_ops kit_shipping kit_support };
+
+	head_shepherd -> shepherds;
+	game_design_coord -> game_design_volunteers;
+}
+		      
