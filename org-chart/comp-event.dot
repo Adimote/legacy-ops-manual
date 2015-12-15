@@ -1,0 +1,46 @@
+digraph {
+	# Competition Coordinator Subordinates
+	comp_event_coord [label="Competition Event Coordinator" color=red penwidth=3];
+
+	# Competition Event Coordinator Subordinates
+	reward_manager[label="Reward Manager"];
+	comp_volunteer_welfare[label="Competition Volunteer Welfare Coordinator"];
+	prod_manager[label="Production Manager"];
+	comp_team_coord[label="Competition Team Coordinator"];
+	comp_game_vol_coord[label="Game Volunteer Coordinator"];
+	comp_sw_ops_coord[label="Competition Software Operations Coordinator"];
+	comp_team_support[label="Competition Team Support Coordinator"];
+	comp_hs_coord[label="Competition H&S Coordinator"];
+	
+	# Competition Team Coordinator Subordinates
+	kit_collection_manager[label="Kit Collection Manager"];
+	receptionist[label="Receptionist"];
+	
+	# Production Manager Subordinates
+	venue[label="Venue" fillcolor=grey style=filled];
+	contractors[label="Contractors" fillcolor=grey style=filled];
+	arena_wranglers[label="Arena Wranglers"];
+	pits_wranglers[label="Pits Wranglers"];
+	
+	# Game Volunteer Coordinator Subordinates
+	head_shepherd[label="Head Shepherd"];
+	commentators[label="Commentators"];
+	linesmen[label="Linesmen"];
+	judges[label="Judges"];
+	
+	shepherds[label="Shepherds"];
+	
+	###### Connections between nodes
+	comp_event_coord -> { reward_manager comp_volunteer_welfare
+                prod_manager comp_team_coord comp_game_vol_coord
+		comp_sw_ops_coord comp_team_support comp_hs_coord
+		};
+		
+	comp_team_coord -> { kit_collection_manager receptionist };
+
+	comp_game_vol_coord -> { head_shepherd commentators linesmen judges };
+	
+	prod_manager -> { venue contractors arena_wranglers pits_wranglers };
+
+	head_shepherd -> shepherds;
+}

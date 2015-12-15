@@ -1,0 +1,57 @@
+digraph {
+	####### Node declarations
+	comp_prog_coord [label="Competition Programme Coordinator" color=red penwidth=3];
+	
+	# Competition Coordinator Subordinates
+	comp_event_coord [label="Competition Event Coordinator"];
+	game_design_coord [label="Game Design Coordinator"];
+	kickstart_event_coord [label="Kickstart Events Coordinator"];
+	team_coord [label="Team Coordinator"];
+	kit [label="Kit Coordinator"];
+	
+	### Fourth Level
+	
+	# Kickstart Event Coordinator Subordinates
+	local_ks_event_coord[label="Local Kickstart Event Coordinator"];
+	local_activity_coord[label="Local Activity Coordinator"];
+	
+	local_team_coord[label="Local Team Coordinator"];
+
+	game_design_volunteers[label="Game Design Volunteers"];
+
+	# Kit Coordinator Subordinates
+	kit_dev[label="Dev" fillcolor=yellow style=filled];
+	kit_manu[label="Manu" fillcolor=yellow style=filled];
+	kit_prod[label="Prod" fillcolor=yellow style=filled];
+	
+	### Fifth Level
+	local_presenter[label="Local Presenter"];
+	local_ks_volunteers[label="Local Kickstart Volunteers"];
+	local_activity_volunteers[label="Local Activity Volunteers"];
+	
+	mentors[label="Mentors"];
+	
+	# Kit Prod Subordinates
+	kit_ops[label="Ops" fillcolor=yellow style=filled];
+	kit_shipping[label="Shipping" fillcolor=yellow style=filled];
+	kit_support[label="Support" fillcolor=yellow style=filled];
+	
+	###### Connections between nodes
+	
+	comp_prog_coord -> { comp_event_coord game_design_coord kickstart_event_coord team_coord kit };
+	
+	kickstart_event_coord -> { local_ks_event_coord local_activity_coord };
+		
+	local_ks_event_coord -> { local_presenter local_ks_volunteers };
+		
+	local_activity_coord -> local_activity_volunteers;
+		
+	team_coord -> local_team_coord;
+	local_team_coord -> mentors;
+		
+	kit -> { kit_dev kit_manu kit_prod };
+	kit_prod -> { kit_ops kit_shipping kit_support };
+
+	game_design_coord -> game_design_volunteers;
+}
+		      
