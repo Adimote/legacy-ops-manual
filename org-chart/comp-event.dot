@@ -1,6 +1,6 @@
 digraph {
 	# Competition Coordinator Subordinates
-	comp_event_coord [label="Competition Event Coordinator" color=red penwidth=3];
+	comp_event_coord [label="Competition Event Coordinator"];
 
 	# Competition Event Coordinator Subordinates
 	reward_manager[label="Reward Manager"];

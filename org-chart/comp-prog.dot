@@ -1,9 +1,9 @@
 digraph {
 	####### Node declarations
-	comp_prog_coord [label="Competition Programme Coordinator" color=red penwidth=3];
+	comp_prog_coord [label="Competition Programme Coordinator"];
 	
 	# Competition Coordinator Subordinates
-	comp_event_coord [label="Competition Event Coordinator"];
+	comp_event_coord [label="Competition Event Coordinator" color=red penwidth=3];
 	game_design_coord [label="Game Design Coordinator"];
 	kickstart_event_coord [label="Kickstart Events Coordinator"];
 	team_coord [label="Team Coordinator"];
