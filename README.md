@@ -4,7 +4,8 @@ This is the Operations Manual for Student Robotics.
 
 The process for updating the operations manual is defined within the
 operations manual itself.  See the section entitled "Operations Manual
-Update Procedure" within the "Procedures" chapter.
+Update Procedure" within the "Procedures" section of the "General
+Operations" chapter of the manual.
 
 # Cross-Reference Labels
 
