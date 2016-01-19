@@ -4,3 +4,25 @@
 \item Data privacy requirements.
 \item Operations manual update procedure
 \end{enumerate}
+
+\section{Operations Manual Update Procedure}
+\label{sec:ops-man-update-procedure}
+
+\begin{enumerate}
+\item The source code of the operations manual is managed in a git repository.  The canonical git repository for the manual is hosted at \url{https://bitbucket.org/srobo/ops-manual}.
+
+\item The git repository for the operations manual may contain the source code for the manual in an intermediate state that has not yet been released.  The contents of this unreleased manual is irrelevant to the current operation of the organisation.
+
+\item A ``released'' operations manual is one that has been approved through a resolution of the trustees.
+
+\item Operations manual releases will be tagged within the canonical git repository with tag names of the format \texttt{vN}, where \texttt{N} is an integer that is one higher than the previous version number.
+
+\item Released versions of the operations manual must be stored in the in the \href{https://bitbucket.org/srobo/ops-manual/downloads}{``Downloads''} section of the Bitbucket web page for the manual's canonical git repository.  The file must be named \texttt{ops-manual-V.pdf}, where \texttt{V} is the name of the git tag that it was built from.
+
+\item When the operations manual is released:
+  \begin{enumerate}
+  \item All previous versions of the operations manual become obsolete.
+  \item All volunteers must be notified of the release by email.
+  \end{enumerate}
+\end{enumerate}
+
