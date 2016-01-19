@@ -1,9 +1,54 @@
 \chapter{Money Matters}
 
+Much of the operation of the organisation hinges on how it manages its money.  This chapter provides details on the processes involved in managing Student Robotics' money.  The monetary management system consists of the following elements:
+
+\begin{enumerate}
+\item A budget, which describes how money is allocated.
+\item A system for approving spends against the budget.
+\item An accounting system, which keeps records of all financial activity.
+\item Taxes.
+\item Fundraising, which brings money in.
+\end{enumerate}
+
+The above topics are discussed in detail in this chapter.
+
+
+\section{The Budget}
+
+The budget describes how the organisation's money is allocated.  It is comprised of a tree of directories containing ``budget lines''.  Any money that is spent by the organisation must be described by a budget line.    Each budget line has the following associated properties:
+
+\begin{description}
+\item[Name] This is a short name for the budget line.  It must be all lower-case, and may not include any whitespace characters.
+\item[Value]  The monetary value of the budget line in GBP.
+\item[Description] A description of what the money associated with this line is for.  This should contain information on how the value of the line was derived.
+\item[Closed] This boolean indicates whether the line has been closed or not.  A closed line may no longer have any money spent against it.
+\item[Roles] A list of the roles within the organisation that are able to either invoke spends against this budget line, or permit specific groups of volunteers to claim expenses against this line.
+\item[Claimable] This boolean indicates whether it is possible for registered volunteers to claim expenses against this budget line when permitted by those in the roles associated with the line.
+\end{description}
+
+Budget lines are referred to by their path within the tree, using forward-slashes to separate the directory and budget line names -- e.g. \texttt{/sr2017/clothing}.  All budget lines that are entirely related to the Student Robotics competition programme should be contained within a directory named after the appropriate Student Robotics year.
+
+In order to avoid situations in which suppliers know exactly how much the organisation has to spend on their goods or services, the contents of the budget must not be shared to the general public, and is only accessible to those who are registered as volunteers.
+
+\subsection{Budget Update Procedure}
+
+\begin{enumerate}
+\item The budget is managed in a git repository.  The canonical git repository for this is hosted at \url{https://bitbucket.org/srobo/budget}.
+\item The master branch of this git repository contains the current budget.
+\item All changes to the contents of the master branch of this git repository must be approved through a resolution of the trustees.
+\end{enumerate}
+
+\section{Spending Money}
+
+\section{Accounting}
+
+\section{Fundraising}
+
 This chapter should contain:
 \begin{enumerate}
 \item Budget
 \item Who can get clearance for spending, and how
 \item Accounting
+\item Tax
 \item Fundraising
 \end{enumerate}
