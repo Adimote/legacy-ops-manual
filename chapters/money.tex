@@ -31,13 +31,20 @@ Budget lines are referred to by their path within the tree, using forward-slashe
 
 In order to avoid situations in which suppliers know exactly how much the organisation has to spend on their goods or services, the contents of the budget must not be shared to the general public, and is only accessible to those who are registered as volunteers.
 
+The budget always describes money that the organisation has already received.  This means that if there is an entry in the budget that is not closed, then it is available for spending.  The actual sum available depends on the amount that has already been spent against that budget line.  The total amount spent against a budget line must not exceed the total value of the line.
+
 \subsection{Budget Update Procedure}
 
-\begin{enumerate}
-\item The budget is managed in a git repository.  The canonical git repository for this is hosted at \url{https://bitbucket.org/srobo/budget}.
-\item The master branch of this git repository contains the current budget.
-\item All changes to the contents of the master branch of this git repository must be approved through a resolution of the trustees.
-\end{enumerate}
+The budget is managed in a git repository.  The canonical git repository for this is hosted at \url{https://bitbucket.org/srobo/budget}.  The master branch of this canonical git repository contains the current budget.  All changes to the contents of the master branch of this git repository must be approved through a resolution of the trustees.
+
+\subsection{Budgeting for the Future}
+
+It is important for there to be a clear understanding of the organisation's monetary requirements for the future.  Therefore, a second branch, called \texttt{future}, is maintained within the budget's git repository.  This branch must contain the current budgetary requirements for the next 3 SR years after the current one.  This information will be used by our fundraisers to ensure that the project can continue.
+
+\subsection{Budget Estimation}
+
+The value of a budget line is an estimate of the amount that will be spent on the goods or services that it is for.  There will be error in that estimate, and so it is essential that this is taken into account when setting the value of a budget line.  Once an estimate has been reached for a budget line, 20\% must be included in the value to allow for error. 
+
 
 \section{Spending Money}
 
