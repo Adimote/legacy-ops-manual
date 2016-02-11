@@ -9,38 +9,59 @@ digraph {
 	comp_team_coord[label="Competition Team Coordinator"];
 	comp_game_vol_coord[label="Game Volunteer Coordinator"];
 	comp_sw_ops_coord[label="Competition Software Operations Coordinator"];
-	comp_team_support[label="Competition Team Support Coordinator"];
+	comp_team_support_coord[label="Competition Team Support Coordinator"];
 	comp_hs_coord[label="Competition H&S Coordinator"];
-	
+
+	# Competition Team Support Coordinator Subordinates
+	helpdesk_vol[label="Helpdesk Volunteers"];
+	battery_charging_vol[label="Battery Charging Station Volunteers"];
+
 	# Competition Team Coordinator Subordinates
 	kit_collection_manager[label="Kit Collection Manager"];
 	receptionist[label="Receptionist"];
-	
+	showing_to_pits_vol[label="Showing to pits Volunteers"]
+	tinker_time_coord[label="Tinker time coordinators"];
+
 	# Production Manager Subordinates
 	venue[label="Venue" fillcolor=grey style=filled];
 	contractors[label="Contractors" fillcolor=grey style=filled];
 	arena_wranglers[label="Arena Wranglers"];
 	pits_wranglers[label="Pits Wranglers"];
-	
+
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd"];
 	commentators[label="Commentators"];
 	linesmen[label="Linesmen"];
 	judges[label="Judges"];
-	
+
+	# Competition Software Operations Coordinator Subordinates
+	score_entry_vol[label="Score Entry Volunteers"];
+
 	shepherds[label="Shepherds"];
-	
+
 	###### Connections between nodes
 	comp_event_coord -> { reward_manager comp_volunteer_welfare
-                prod_manager comp_team_coord comp_game_vol_coord
-		comp_sw_ops_coord comp_team_support comp_hs_coord
+	            prod_manager comp_team_coord comp_game_vol_coord
+		comp_sw_ops_coord comp_hs_coord
+		comp_team_support_coord
 		};
-		
-	comp_team_coord -> { kit_collection_manager receptionist };
+
+	comp_team_coord -> {
+		kit_collection_manager
+		receptionist
+		showing_to_pits_vol
+		tinker_time_coord
+	};
+
+	comp_team_support_coord -> { helpdesk_vol battery_charging_vol };
 
 	comp_game_vol_coord -> { head_shepherd commentators linesmen judges };
-	
+
 	prod_manager -> { venue contractors arena_wranglers pits_wranglers };
 
 	head_shepherd -> shepherds;
+
+	comp_sw_ops_coord -> {
+		score_entry_vol
+	};
 }
