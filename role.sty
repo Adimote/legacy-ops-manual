@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{role}[2016/02/20 SR ops manual role formatting]
+
+\RequirePackage{acro}
+
+\ProcessOptions\relax
+
+\newenvironment{roledesc}[1]
+{
+  \subsection{\acf{#1}}
+  \label{role:#1}
+  % Ideally output contact details here. Needs version >=2 of acro to access extra info.
+}
+{}
+
+\newcommand{\DeclareRole}[4]
+{\DeclareAcronym{#1}{
+  short = #1,
+  long = #2,
+  class = roles,
+  extra = {Tel: #3, Email: #4}
+}}
+
+\newcommand{\RoleShort}[1]
+{\hyperref[role:#1]{\acs{#1}}}
+
+\newcommand{\RoleLong}[1]
+{\hyperref[role:#1]{\acl{#1}}}
+
+\newcommand{\RoleFull}[1]
+{\hyperref[role:#1]{\acf{#1}}}
+
+\endinput
