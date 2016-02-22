@@ -8,8 +8,8 @@ INC_FILES :=
 include ./*/include.mk
 
 ops-manual.pdf: $(TEX_FILES) $(INC_FILES)
-	xelatex $(TEX_FILES)
-	xelatex $(TEX_FILES)
+	xelatex ops-manual.tex
+	xelatex ops-manual.tex
 
 .PHONY: clean
 
