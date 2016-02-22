@@ -4,6 +4,8 @@
 \usepackage{hypcap}
 \usepackage{pdflscape}
 \usepackage{parskip}
+\usepackage[page,toc]{appendix}
+\usepackage{role}
 
 \hypersetup{
   pdftitle={Student Robotics Operations Manual},
@@ -12,6 +14,8 @@
 }
 
 \setlength{\parindent}{0pt}
+
+\input{role-defs.tex}
 
 \title{Operations Manual}
 \author{Student Robotics}
@@ -27,5 +31,9 @@
 \input{chapters/public.tex}
 \input{chapters/money.tex}
 \input{chapters/misc.tex}
+
+\begin{appendices}
+\input{appendices/roles.tex}
+\end{appendices}
 
 \end{document}
