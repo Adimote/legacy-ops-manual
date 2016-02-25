@@ -31,13 +31,14 @@ digraph {
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd"];
 	commentators[label="Commentators"];
-	linesmen[label="Linesmen"];
+	head_linesman[label="Head Linesman"];
 	judges[label="Judges"];
 
 	# Competition Software Operations Coordinator Subordinates
 	score_entry_vol[label="Score Entry Volunteers"];
 
 	shepherds[label="Shepherds"];
+	linesmen[label="Linesmen"];
 
 	###### Connections between nodes
 	comp_event_coord -> { reward_manager comp_volunteer_welfare
@@ -55,11 +56,12 @@ digraph {
 
 	comp_team_support_coord -> { helpdesk_vol battery_charging_vol };
 
-	comp_game_vol_coord -> { head_shepherd commentators linesmen judges };
+	comp_game_vol_coord -> { head_shepherd commentators head_linesman judges };
 
 	prod_manager -> { venue contractors arena_wranglers pits_wranglers };
 
 	head_shepherd -> shepherds;
+	head_linesman -> linesmen;
 
 	comp_sw_ops_coord -> {
 		score_entry_vol
