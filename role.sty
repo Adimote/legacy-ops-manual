@@ -1,34 +1,51 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{role}[2016/02/20 SR ops manual role formatting]
 
-\RequirePackage{acro}
+\RequirePackage{datatool}
 \RequirePackage{etoolbox}
+\RequirePackage{longtable}
 
 \ProcessOptions\relax
 
+\newrobustcmd{\LoadRoles}[1]
+{
+  \DTLloaddb{roles}{#1}
+}
+
+\newrobustcmd{\rolefetchwithdefault}[3]
+{\DTLgetvalueforkey{\tmp}{#2}{roles}{id}{#1}\DTLifstringeq{\tmp}{}{#3}{\tmp}}
+
+\newrobustcmd{\roletitle}[1]
+{\DTLfetch{roles}{id}{#1}{title}}
+
+\newrobustcmd{\roletel}[1]
+{\rolefetchwithdefault{#1}{tel}{--}}
+
+\newrobustcmd{\roleemail}[1]
+{\rolefetchwithdefault{#1}{email}{--}}
+
+\newrobustcmd{\role}[1]
+{\hyperref[role:#1]{\roletitle{#1}}}
+
 \newenvironment{roledesc}[1]
 {
-  \subsection{\acf{#1}}
+  \subsection{\roletitle{#1}}
   \label{role:#1}
-  % Ideally output contact details here. Needs version >=2 of acro to access extra info.
+  \framebox[\textwidth]{Email: \roleemail{#1}\hfill Tel: \roletel{#1}}
+
+  % The above blank line is important to force paragraph skip between framebox and env contents
 }
 {}
 
-\newcommand{\DeclareRole}[4]
-{\DeclareAcronym{#1}{
-  short = #1,
-  long = #2,
-  class = roles,
-  extra = {Tel: \ifstrempty{#3}{n/a}{#3}, Email: \ifstrempty{#4}{n/a}{#4}}
-}}
-
-\newcommand{\RoleShort}[1]
-{\hyperref[role:#1]{\acs{#1}}}
-
-\newcommand{\RoleLong}[1]
-{\hyperref[role:#1]{\acl{#1}}}
-
-\newcommand{\RoleFull}[1]
-{\hyperref[role:#1]{\acf{#1}}}
+\newrobustcmd{\roletable}
+{
+  \begin{longtable}{lll}
+    \textbf{Title} & \textbf{Email} & \textbf{Telephone Number} \\ \hline
+    \endhead
+    \DTLforeach{roles}{\rtitle=title,\remail=email,\rtel=tel}{\\
+      \rtitle & \remail & \rtel
+    }
+  \end{longtable}
+}
 
 \endinput

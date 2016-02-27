@@ -1,9 +1,9 @@
 CLEAN_FILES :=
 
-TEX_FILES := ops-manual.tex role-defs.tex chapters/*.tex chapters/*/*.tex appendices/*.tex
+TEX_FILES := ops-manual.tex chapters/*.tex chapters/*/*.tex appendices/*.tex
 
 # Files that the main document depends on, which aren't tex files
-INC_FILES := role.sty
+INC_FILES := role.sty roles.csv
 
 include ./*/include.mk
 
