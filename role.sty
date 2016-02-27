@@ -2,6 +2,7 @@
 \ProvidesPackage{role}[2016/02/20 SR ops manual role formatting]
 
 \RequirePackage{acro}
+\RequirePackage{etoolbox}
 
 \ProcessOptions\relax
 
@@ -18,7 +19,7 @@
   short = #1,
   long = #2,
   class = roles,
-  extra = {Tel: #3, Email: #4}
+  extra = {Tel: \ifstrempty{#3}{n/a}{#3}, Email: \ifstrempty{#4}{n/a}{#4}}
 }}
 
 \newcommand{\RoleShort}[1]
