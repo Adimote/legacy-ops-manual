@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import pydot
+import pydotplus
 import sys
 
 class Role(object):
@@ -40,7 +40,7 @@ class Role(object):
 
 roles = []
 for f in sys.argv[1:]:
-    dot_file = pydot.graph_from_dot_file(f)
+    dot_file = pydotplus.graph_from_dot_file(f)
     file_roles = [Role(n) for n in dot_file.get_nodes()]
     roles += file_roles
 
