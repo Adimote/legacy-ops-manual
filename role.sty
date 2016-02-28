@@ -40,7 +40,7 @@
 }
 {}
 
-\newrobustcmd{\rolecontacttable}
+\newrobustcmd{\rolecontacttable}[1]
 {
   \begin{table}[htbp]
     \begin{longtable}{lll}
@@ -52,7 +52,7 @@
       }%
       \\\bottomrule
     \end{longtable}
-    \caption{\label{tab:rolecontacts}Role-specific contact details}
+    \caption{\label{#1}Role-specific contact details}
   \end{table}
 }
 
