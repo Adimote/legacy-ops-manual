@@ -1,40 +1,40 @@
 digraph {
 	####### Node declarations
-	comp_prog_coord [label="Competition Programme Coordinator"];
+	comp_prog_coord [label="Competition Programme Coordinator" email="competition-program@studentrobotics.org"];
 	
 	# Competition Coordinator Subordinates
-	comp_event_coord [label="Competition Event Coordinator" color=red penwidth=3];
-	game_design_coord [label="Game Design Coordinator"];
-	kickstart_event_coord [label="Kickstart Events Coordinator"];
-	team_coord [label="Team Coordinator"];
-	kit [label="Kit Coordinator"];
+	comp_event_coord [label="Competition Event Coordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-event.dot
+	game_design_coord [label="Game Design Coordinator" email="game-design@studentrobotics.org"];
+	kickstart_event_coord [label="Kickstart Events Coordinator" email="kickstart@studentrobotics.org"];
+	team_coord [label="Team Coordinator" email="teams@studentrobotics.org"];
+	kit [label="Kit Coordinator" email="kit@studentrobotics.org"];
 	
 	### Fourth Level
 	
 	# Kickstart Event Coordinator Subordinates
-	local_ks_event_coord[label="Local Kickstart Event Coordinator"];
-	local_activity_coord[label="Local Activity Coordinator"];
+	local_ks_event_coord[label="Local Kickstart Event Coordinator" contactsexclude=true];
+	local_activity_coord[label="Local Activity Coordinator" contactsexclude=true];
 	
-	local_team_coord[label="Local Team Coordinator"];
+	local_team_coord[label="Local Team Coordinator" contactsexclude=true];
 
-	game_design_volunteers[label="Game Design Volunteers"];
+	game_design_volunteers[label="Game Design Volunteers" contactsexclude=true];
 
 	# Kit Coordinator Subordinates
-	kit_dev[label="Dev" fillcolor=yellow style=filled];
-	kit_manu[label="Manu" fillcolor=yellow style=filled];
-	kit_prod[label="Prod" fillcolor=yellow style=filled];
+	kit_dev[label="Dev" fillcolor=yellow style=filled contactsexclude=true];
+	kit_manu[label="Manu" fillcolor=yellow style=filled contactsexclude=true];
+	kit_prod[label="Prod" fillcolor=yellow style=filled contactsexclude=true];
 	
 	### Fifth Level
-	local_presenter[label="Local Presenter"];
-	local_ks_volunteers[label="Local Kickstart Volunteers"];
-	local_activity_volunteers[label="Local Activity Volunteers"];
+	local_presenter[label="Local Presenter" contactsexclude=true];
+	local_ks_volunteers[label="Local Kickstart Volunteers" contactsexclude=true];
+	local_activity_volunteers[label="Local Activity Volunteers" contactsexclude=true];
 	
-	mentors[label="Mentors"];
+	mentors[label="Mentors" contactsexclude=true];
 	
 	# Kit Prod Subordinates
-	kit_ops[label="Ops" fillcolor=yellow style=filled];
-	kit_shipping[label="Shipping" fillcolor=yellow style=filled];
-	kit_support[label="Support" fillcolor=yellow style=filled];
+	kit_ops[label="Ops" fillcolor=yellow style=filled contactsexclude=true];
+	kit_shipping[label="Shipping" fillcolor=yellow style=filled contactsexclude=true];
+	kit_support[label="Support" fillcolor=yellow style=filled contactsexclude=true];
 	
 	###### Connections between nodes
 	

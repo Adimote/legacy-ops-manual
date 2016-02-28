@@ -1,33 +1,33 @@
 digraph {
 	####### Node declarations
 	### Highest-level
-	trustees [label="Trustees"];
+	trustees [label="Trustees" email="trustees@studentrobotics.org"];
 	
 	### Second level
-	comp_prog_coord [label="Competition Programme Coordinator" color=red penwidth=3];
-	fund_coord [label="Fundraising Coordinator"];
-	treasurers [label="Treasurers"];
-	pr_coord [label="PR Coordinator"];
-	internet_owner [label="Internet Owner"];
-	welfare_coord [label="Welfare Coordinator"];
+	comp_prog_coord [label="Competition Programme Coordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-prog.dot
+	fund_coord [label="Fundraising Coordinator" email="fundraising@studentrobotics.org"];
+	treasurers [label="Treasurers" email="treasurers@studentrobotics.org"];
+	pr_coord [label="PR Coordinator" email="pr@studentrobotics.org"];
+	internet_owner [label="Internet Owner" email="internet@studentrobotics.org"];
+	welfare_coord [label="Welfare Coordinator" email="welfare@studentrobotics.org"];
 	
 	### Third Level
 	
 	# Fundraising Coordinator Subordinates
-	fund_volunteers [label="Fundraising Volunteers"];
+	fund_volunteers [label="Fundraising Volunteers" contactsexclude=true];
 	
 	# PR Coordinator Subordinates
-	pr_web_tech [label="PR Web Tech" fillcolor=yellow style=filled];
-	graphic_design [label="Graphic Design" fillcolor=yellow style=filled];
+	pr_web_tech [label="PR Web Tech" fillcolor=yellow style=filled contactsexclude=true];
+	graphic_design [label="Graphic Design" fillcolor=yellow style=filled contactsexclude=true];
 	
 	# Welfare Coordinator Subordinates
-	volunteer_recruitment_coord[label="Volunteer Recruitment Coordinator"];
+	vol_rec_coord[label="Volunteer Recruitment Coordinator" email="volunteer-recruitment@studentrobotics.org"];
 	
 	###### Connections between nodes
 	
 	trustees -> { comp_prog_coord fund_coord treasurers pr_coord internet_owner welfare_coord };
 	
 	pr_coord -> { pr_web_tech graphic_design };
-	welfare_coord -> { volunteer_recruitment_coord };
+	welfare_coord -> { vol_rec_coord };
 	fund_coord -> { fund_volunteers };
 }

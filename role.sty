@@ -4,12 +4,14 @@
 \RequirePackage{datatool}
 \RequirePackage{etoolbox}
 \RequirePackage{longtable}
+\RequirePackage{ifthen}
+\RequirePackage{booktabs}
 
 \ProcessOptions\relax
 
 \newrobustcmd{\LoadRoles}[1]
 {
-  \DTLloaddb{roles}{#1}
+  \DTLloadrawdb{roles}{#1}
 }
 
 \newrobustcmd{\rolefetchwithdefault}[3]
@@ -37,15 +39,20 @@
 }
 {}
 
-\newrobustcmd{\roletable}
+\newrobustcmd{\rolecontacttable}
 {
-  \begin{longtable}{lll}
-    \textbf{Title} & \textbf{Email} & \textbf{Telephone Number} \\ \hline
-    \endhead
-    \DTLforeach{roles}{\rtitle=title,\remail=email,\rtel=tel}{\\
-      \rtitle & \remail & \rtel
-    }
-  \end{longtable}
+  \begin{table}[htbp]
+    \begin{longtable}{lll}
+      \toprule
+      \textbf{Title} & \textbf{Email} & \textbf{Telephone Number}
+      \DTLforeach*[\equal{\rexclude}{False}]{roles}{\rtitle=title,\remail=email,\rtel=tel,\rexclude=contactsexclude}{%
+        \DTLiffirstrow{\\ \midrule \endhead}{\\}%
+        \rtitle & \remail & \rtel
+      }%
+      \\\bottomrule
+    \end{longtable}
+    \caption{\label{tab:rolecontacts}Role-specific contact details}
+  \end{table}
 }
 
 \endinput

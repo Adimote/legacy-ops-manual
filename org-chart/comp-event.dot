@@ -1,44 +1,44 @@
 digraph {
 	# Competition Coordinator Subordinates
-	comp_event_coord [label="Competition Event Coordinator"];
+	comp_event_coord [label="Competition Event Coordinator" email="competition-event@studentrobotics.org"];
 
 	# Competition Event Coordinator Subordinates
-	reward_manager[label="Reward Manager"];
-	comp_volunteer_welfare[label="Competition Volunteer Welfare Coordinator"];
-	prod_manager[label="Production Manager"];
-	comp_team_coord[label="Competition Team Coordinator"];
-	comp_game_vol_coord[label="Game Volunteer Coordinator"];
-	comp_sw_ops_coord[label="Competition Software Operations Coordinator"];
-	comp_team_support_coord[label="Competition Team Support Coordinator"];
-	comp_hs_coord[label="Competition H&S Coordinator"];
+	reward_manager[label="Reward Manager" contactsexclude=true];
+	comp_volunteer_welfare[label="Competition Volunteer Welfare Coordinator" email="competition-welfare@studentrobotics.org"];
+	prod_manager[label="Production Manager" email="production-manager@studentrobotics.org"];
+	comp_team_coord[label="Competition Team Coordinator" email="competition-teams@studentrobotics.org"];
+	comp_game_vol_coord[label="Game Volunteer Coordinator" email="game-volunteers@studentrobotics.org"];
+	comp_sw_ops_coord[label="Competition Software Operations Coordinator" email="competition-software@studentrobotics.org"];
+	comp_team_support_coord[label="Competition Team Support Coordinator" email="competition-team-support@studentrobotics.org"];
+	comp_hs_coord[label="Competition H&S Coordinator" email="competition-health-and-safety@studentrobotics.org"];
 
 	# Competition Team Support Coordinator Subordinates
-	helpdesk_vol[label="Helpdesk Volunteers"];
-	battery_charging_vol[label="Battery Charging Station Volunteers"];
+	helpdesk_vol[label="Helpdesk Volunteers" contactsexclude=true];
+	battery_charging_vol[label="Battery Charging Station Volunteers" contactsexclude=true];
 
 	# Competition Team Coordinator Subordinates
-	kit_collection_manager[label="Kit Collection Manager"];
-	receptionist[label="Receptionist"];
-	showing_to_pits_vol[label="Showing to pits Volunteers"]
-	tinker_time_coord[label="Tinker time coordinators"];
+	kit_collection_manager[label="Kit Collection Manager" email="kit-collection@studentrobotics.org"];
+	receptionist[label="Receptionist" email="reception@studentrobotics.org"];
+	showing_to_pits_vol[label="Showing to pits Volunteers" contactsexclude=true]
+	tinker_time_coord[label="Tinker time coordinators" email="tinker-time@studentrobotics.org"];
 
 	# Production Manager Subordinates
-	venue[label="Venue" fillcolor=grey style=filled];
-	contractors[label="Contractors" fillcolor=grey style=filled];
-	arena_wranglers[label="Arena Wranglers"];
-	pits_wranglers[label="Pits Wranglers"];
+	venue[label="Venue" fillcolor=grey style=filled contactsexclude=true];
+	contractors[label="Contractors" fillcolor=grey style=filled contactsexclude=true];
+	arena_wranglers[label="Arena Wranglers" email="arena@studentrobotics.org"];
+	pits_wranglers[label="Pits Wranglers" email="pits@studentrobotics.org"];
 
 	# Game Volunteer Coordinator Subordinates
-	head_shepherd[label="Head Shepherd"];
-	commentators[label="Commentators"];
-	head_linesman[label="Head Linesman"];
-	judges[label="Judges"];
+	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
+	commentators[label="Commentators" email="commentators@studentrobotics.org"];
+	head_linesman[label="Head Linesman" email="linesmen@studentrobotics.org"];
+	judges[label="Judges" email="judge@studentrobotics.org"];
 
 	# Competition Software Operations Coordinator Subordinates
-	score_entry_vol[label="Score Entry Volunteers"];
+	score_entry_vol[label="Score Entry Volunteers" contactsexclude=true];
 
-	shepherds[label="Shepherds"];
-	linesmen[label="Linesmen"];
+	shepherds[label="Shepherds" contactsexclude=true];
+	linesmen[label="Linesmen" contactsexclude=true];
 
 	###### Connections between nodes
 	comp_event_coord -> { reward_manager comp_volunteer_welfare
