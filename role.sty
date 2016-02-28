@@ -29,11 +29,12 @@
 \newrobustcmd{\role}[1]
 {\hyperref[role:#1]{\roletitle{#1}}}
 
-\newenvironment{roledesc}[1]
+% arg1: sectioning command, arg2: role id
+\newenvironment{roledesc}[2]
 {
-  \subsection{\roletitle{#1}}
-  \label{role:#1}
-  \framebox[\textwidth]{Email: \roleemail{#1}\hfill Tel: \roletel{#1}}
+  #1*{\roletitle{#2}}
+  \label{role:#2}
+  \framebox[\textwidth]{Email: \roleemail{#2}\hfill Tel: \roletel{#2}}
 
   % The above blank line is important to force paragraph skip between framebox and env contents
 }
