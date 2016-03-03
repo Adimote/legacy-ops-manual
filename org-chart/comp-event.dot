@@ -16,12 +16,6 @@ digraph {
 	helpdesk_vol[label="Helpdesk Volunteers" contactsexclude=true];
 	battery_charging_vol[label="Battery Charging Station Volunteers" contactsexclude=true];
 
-	# Competition Team Coordinator Subordinates
-	kit_collection_manager[label="Kit Collection Manager" email="kit-collection@studentrobotics.org"];
-	receptionist[label="Receptionist" email="reception@studentrobotics.org"];
-	showing_to_pits_vol[label="Showing to pits Volunteers" contactsexclude=true]
-	tinker_time_coord[label="Tinker time coordinators" email="tinker-time@studentrobotics.org"];
-
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
 	commentators[label="Commentators" email="commentators@studentrobotics.org"];
@@ -37,13 +31,6 @@ digraph {
 		comp_sw_ops_coord comp_hs_coord
 		comp_team_support_coord
 		};
-
-	comp_team_coord -> {
-		kit_collection_manager
-		receptionist
-		showing_to_pits_vol
-		tinker_time_coord
-	};
 
 	comp_team_support_coord -> { helpdesk_vol battery_charging_vol };
 
