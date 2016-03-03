@@ -22,12 +22,6 @@ digraph {
 	showing_to_pits_vol[label="Showing to pits Volunteers" contactsexclude=true]
 	tinker_time_coord[label="Tinker time coordinators" email="tinker-time@studentrobotics.org"];
 
-	# Production Manager Subordinates
-	venue[label="Venue" fillcolor=grey style=filled contactsexclude=true];
-	contractors[label="Contractors" fillcolor=grey style=filled contactsexclude=true];
-	arena_wranglers[label="Arena Wranglers" email="arena@studentrobotics.org"];
-	pits_wranglers[label="Pits Wranglers" email="pits@studentrobotics.org"];
-
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
 	commentators[label="Commentators" email="commentators@studentrobotics.org"];
@@ -57,8 +51,6 @@ digraph {
 	comp_team_support_coord -> { helpdesk_vol battery_charging_vol };
 
 	comp_game_vol_coord -> { head_shepherd commentators head_linesman judges };
-
-	prod_manager -> { venue contractors arena_wranglers pits_wranglers };
 
 	head_shepherd -> shepherds;
 	head_linesman -> linesmen;
