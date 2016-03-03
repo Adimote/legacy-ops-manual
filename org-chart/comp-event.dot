@@ -31,9 +31,6 @@ digraph {
 	# Competition Software Operations Coordinator Subordinates
 	score_entry_vol[label="Score Entry Volunteers" contactsexclude=true];
 
-	shepherds[label="Shepherds" contactsexclude=true];
-	linesmen[label="Linesmen" contactsexclude=true];
-
 	###### Connections between nodes
 	comp_event_coord -> { reward_manager comp_volunteer_welfare
 	            prod_manager comp_team_coord comp_game_vol_coord
@@ -51,9 +48,6 @@ digraph {
 	comp_team_support_coord -> { helpdesk_vol battery_charging_vol };
 
 	comp_game_vol_coord -> { head_shepherd commentators head_linesman judges };
-
-	head_shepherd -> shepherds;
-	head_linesman -> linesmen;
 
 	comp_sw_ops_coord -> {
 		score_entry_vol
