@@ -8,7 +8,7 @@ digraph {
 	prod_manager[label="Production Manager" email="production-manager@studentrobotics.org"];
 	comp_team_coord[label="Competition Team Coordinator" email="competition-teams@studentrobotics.org"];
 	comp_game_vol_coord[label="Game Volunteer Coordinator" email="game-volunteers@studentrobotics.org"];
-	comp_sw_ops_coord[label="Competition Software Operations Coordinator" email="competition-software@studentrobotics.org"];
+	comp_sw_ops_coord[label="Competition Software Operations Coordinator" email="competition-software-ops@studentrobotics.org"];
 	comp_team_support_coord[label="Competition Team Support Coordinator" email="competition-team-support@studentrobotics.org"];
 	comp_hs_coord[label="Competition H&S Coordinator" email="competition-health-and-safety@studentrobotics.org"];
 
@@ -22,9 +22,6 @@ digraph {
 	head_linesman[label="Head Linesman" email="linesmen@studentrobotics.org"];
 	judges[label="Judges" email="judge@studentrobotics.org"];
 
-	# Competition Software Operations Coordinator Subordinates
-	score_entry_vol[label="Score Entry Volunteers" contactsexclude=true];
-
 	###### Connections between nodes
 	comp_event_coord -> { reward_manager comp_volunteer_welfare
 	            prod_manager comp_team_coord comp_game_vol_coord
@@ -35,8 +32,4 @@ digraph {
 	comp_team_support_coord -> { helpdesk_vol battery_charging_vol };
 
 	comp_game_vol_coord -> { head_shepherd commentators head_linesman judges };
-
-	comp_sw_ops_coord -> {
-		score_entry_vol
-	};
 }
