@@ -12,10 +12,6 @@ digraph {
 	comp_team_support_coord[label="Competition Team Support Coordinator" email="competition-team-support@studentrobotics.org"];
 	comp_hs_coord[label="Competition H&S Coordinator" email="competition-health-and-safety@studentrobotics.org"];
 
-	# Competition Team Support Coordinator Subordinates
-	helpdesk_vol[label="Helpdesk Volunteers" contactsexclude=true];
-	battery_charging_vol[label="Battery Charging Station Volunteers" contactsexclude=true];
-
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
 	commentators[label="Commentators" email="commentators@studentrobotics.org"];
@@ -28,8 +24,6 @@ digraph {
 		comp_sw_ops_coord comp_hs_coord
 		comp_team_support_coord
 		};
-
-	comp_team_support_coord -> { helpdesk_vol battery_charging_vol };
 
 	comp_game_vol_coord -> { head_shepherd commentators head_linesman judges };
 }
