@@ -12,10 +12,10 @@ digraph {
 	### Fourth Level
 	
 	# Kickstart Event Coordinator Subordinates
-	local_ks_event_coord[label="Local Kickstart Event Coordinator" contactsexclude=true];
-	local_activity_coord[label="Local Activity Coordinator" contactsexclude=true];
+	local_ks_event_coord[label="Local Kickstart Event Coordinator" color=blue style=dashed contactsexclude=true];
+	local_activity_coord[label="Local Activity Coordinator" color=blue style=dashed contactsexclude=true];
 	
-	local_team_coord[label="Local Team Coordinator" contactsexclude=true];
+	local_team_coord[label="Local Team Coordinator" color=blue style=dashed contactsexclude=true];
 
 	game_design_volunteers[label="Game Design Volunteers" contactsexclude=true];
 
@@ -25,11 +25,11 @@ digraph {
 	kit_prod[label="Prod" fillcolor=yellow style=filled contactsexclude=true];
 	
 	### Fifth Level
-	local_presenter[label="Local Presenter" contactsexclude=true];
-	local_ks_volunteers[label="Local Kickstart Volunteers" contactsexclude=true];
-	local_activity_volunteers[label="Local Activity Volunteers" contactsexclude=true];
+	local_presenter[label="Local Presenter" color=blue style=dashed contactsexclude=true];
+	local_ks_volunteers[label="Local Kickstart Volunteers" color=blue style=dashed contactsexclude=true];
+	local_activity_volunteers[label="Local Activity Volunteers" color=blue style=dashed contactsexclude=true];
 	
-	mentors[label="Mentors" contactsexclude=true];
+	mentors[label="Mentors" color=blue style=dashed contactsexclude=true];
 	
 	# Kit Prod Subordinates
 	kit_ops[label="Ops" fillcolor=yellow style=filled contactsexclude=true];
