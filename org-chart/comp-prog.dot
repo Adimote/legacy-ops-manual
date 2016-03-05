@@ -26,8 +26,6 @@ digraph {
 	
 	### Fifth Level
 	local_presenter[label="Local Presenter" color=blue style=dashed contactsexclude=true];
-	local_ks_volunteers[label="Local Kickstart Volunteers" color=blue style=dashed contactsexclude=true];
-	local_activity_volunteers[label="Local Activity Volunteers" color=blue style=dashed contactsexclude=true];
 	
 	mentors[label="Mentors" color=blue style=dashed contactsexclude=true];
 	
@@ -42,9 +40,7 @@ digraph {
 	
 	kickstart_event_coord -> { local_ks_event_coord local_activity_coord };
 		
-	local_ks_event_coord -> { local_presenter local_ks_volunteers };
-		
-	local_activity_coord -> local_activity_volunteers;
+	local_ks_event_coord -> { local_presenter };
 		
 	team_coord -> local_team_coord;
 	local_team_coord -> mentors;
