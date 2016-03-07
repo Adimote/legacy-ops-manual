@@ -13,9 +13,6 @@ digraph {
 	
 	### Third Level
 	
-	# Fundraising Coordinator Subordinates
-	fund_volunteers [label="Fundraising Volunteers" contactsexclude=true];
-	
 	# PR Coordinator Subordinates
 	pr_web_tech [label="PR Web Tech" fillcolor=yellow style=filled contactsexclude=true];
 	graphic_design [label="Graphic Design" fillcolor=yellow style=filled contactsexclude=true];
@@ -29,5 +26,4 @@ digraph {
 	
 	pr_coord -> { pr_web_tech graphic_design };
 	welfare_coord -> { vol_rec_coord };
-	fund_coord -> { fund_volunteers };
 }
