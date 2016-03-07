@@ -17,8 +17,6 @@ digraph {
 	
 	local_team_coord[label="Local Team Coordinator" color=blue style=dashed contactsexclude=true];
 
-	game_design_volunteers[label="Game Design Volunteers" contactsexclude=true];
-
 	# Kit Coordinator Subordinates
 	kit_dev[label="Dev" fillcolor=yellow style=filled contactsexclude=true];
 	kit_manu[label="Manu" fillcolor=yellow style=filled contactsexclude=true];
@@ -47,7 +45,5 @@ digraph {
 		
 	kit -> { kit_dev kit_manu kit_prod };
 	kit_prod -> { kit_ops kit_shipping kit_support };
-
-	game_design_coord -> game_design_volunteers;
 }
 		      
