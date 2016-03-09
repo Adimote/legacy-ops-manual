@@ -15,7 +15,7 @@ digraph {
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
 	commentators[label="Commentators" email="commentators@studentrobotics.org"];
-	head_linesman[label="Head Linesman" email="linesmen@studentrobotics.org"];
+	head_match_scorer[label="Head Match Scorer" email="match-scorer@studentrobotics.org"];
 	judges[label="Judges" email="judge@studentrobotics.org"];
 
 	###### Connections between nodes
@@ -25,5 +25,5 @@ digraph {
 		comp_team_support_coord
 		};
 
-	comp_game_vol_coord -> { head_shepherd commentators head_linesman judges };
+	comp_game_vol_coord -> { head_shepherd commentators head_match_scorer judges };
 }
