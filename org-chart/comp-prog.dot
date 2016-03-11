@@ -8,7 +8,7 @@ digraph {
 	kickstart_event_coord [label="Kickstart Events\nCoordinator" email="kickstart@studentrobotics.org"];
 	team_coord [label="Team Coordinator" email="teams@studentrobotics.org"];
 	kit_coord [label="Kit Coordinator" email="kit@studentrobotics.org"];
-	internal_sw_coord [label="Internal Software\nCoordinator" email="internal-software@studentrobotics.org"];
+	ancillary_sw_coord [label="Ancillary Software\nCoordinator" email="ancillary-software@studentrobotics.org"];
 	
 	### Fourth Level
 	
@@ -36,7 +36,7 @@ digraph {
 	
 	###### Connections between nodes
 	
-	comp_prog_coord -> { comp_event_coord game_design_coord kickstart_event_coord team_coord kit_coord internal_sw_coord };
+	comp_prog_coord -> { comp_event_coord game_design_coord kickstart_event_coord team_coord kit_coord ancillary_sw_coord };
 	
 	kickstart_event_coord -> { local_ks_event_coord activity_coord };
 		
