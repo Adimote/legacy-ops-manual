@@ -22,7 +22,7 @@ digraph {
 	
 	###### Connections between nodes
 	
-	trustees -> { comp_prog_coord fund_coord treasurers pr_coord internet_owner welfare_coord };
+	trustees -> { comp_prog_coord fund_coord head_treasurer pr_coord internet_owner welfare_coord };
 	
 	pr_coord -> { pr_web_tech graphic_design };
 	welfare_coord -> { vol_rec_coord };
