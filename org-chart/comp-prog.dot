@@ -19,19 +19,19 @@ digraph {
 	local_team_coord[label="Local Team\nCoordinator" color=blue style=dashed contactsexclude=true];
 
 	# Kit Coordinator Subordinates
-	kit_dev[label="Dev" fillcolor=yellow style=filled contactsexclude=true];
-	kit_manu[label="Manu" fillcolor=yellow style=filled contactsexclude=true];
-	kit_prod[label="Prod" fillcolor=yellow style=filled contactsexclude=true];
+	kit_hw_coord[label="Kit Hardware\nCoordinator" email="kit-hardware@studentrobotics.org"];
+	kit_sw_coord[label="Kit Software\nCoordinator" email="kit-software@studentrobotics.org"];
+	kit_shipping_coord[label="Kit Shipping\nCoordinator" email="kit-shipping@studentrobotics.org"];
+
+	# Hardware Coordinator Subordinates
+	hw_dev_coord[label="HW Development\nCoordinator" contactsexclude=true];
+	hw_manu_coord[label="HW Manufacture\n& Maintenance Coordinator" contactsexclude=true];
 	
 	### Fifth Level
 	local_presenter[label="Local Presenter" color=blue style=dashed contactsexclude=true];
 	
 	mentors[label="Mentors" color=blue style=dashed contactsexclude=true];
 	
-	# Kit Prod Subordinates
-	kit_ops[label="Ops" fillcolor=yellow style=filled contactsexclude=true];
-	kit_shipping[label="Shipping" fillcolor=yellow style=filled contactsexclude=true];
-	kit_support[label="Support" fillcolor=yellow style=filled contactsexclude=true];
 	
 	###### Connections between nodes
 	
@@ -45,7 +45,7 @@ digraph {
 	team_coord -> local_team_coord;
 	local_team_coord -> mentors;
 		
-	kit_coord -> { kit_dev kit_manu kit_prod };
-	kit_prod -> { kit_ops kit_shipping kit_support };
+	kit_coord -> { kit_hw_coord kit_sw_coord kit_shipping_coord};
+	kit_hw_coord -> { hw_dev_coord hw_manu_coord };
 }
 		      
