@@ -13,8 +13,9 @@ digraph {
 	
 	# Kickstart Event Coordinator Subordinates
 	local_ks_event_coord[label="Local Kickstart\nEvent Coordinator" color=blue style=dashed contactsexclude=true];
+	activity_coord[label="Activity Coordinator" email="activity@studentrobotics.org"]
+
 	local_activity_coord[label="Local Activity\nCoordinator" color=blue style=dashed contactsexclude=true];
-	
 	local_team_coord[label="Local Team\nCoordinator" color=blue style=dashed contactsexclude=true];
 
 	# Kit Coordinator Subordinates
@@ -36,8 +37,9 @@ digraph {
 	
 	comp_prog_coord -> { comp_event_coord game_design_coord kickstart_event_coord team_coord kit };
 	
-	kickstart_event_coord -> { local_ks_event_coord local_activity_coord };
+	kickstart_event_coord -> { local_ks_event_coord activity_coord };
 		
+	activity_coord -> local_activity_coord;
 	local_ks_event_coord -> { local_presenter };
 		
 	team_coord -> local_team_coord;
