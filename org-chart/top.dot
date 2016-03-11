@@ -6,7 +6,7 @@ digraph {
 	### Second level
 	comp_prog_coord [label="Competition Programme\nCoordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-prog.dot
 	fund_coord [label="Fundraising\nCoordinator" email="fundraising@studentrobotics.org"];
-	treasurers [label="Treasurers" email="treasurers@studentrobotics.org"];
+	head_treasurer [label="Head Treasurer" email="treasurer@studentrobotics.org"];
 	internet_owner [label="Internet\nOwner" email="internet@studentrobotics.org"];
 	welfare_coord [label="Welfare\nCoordinator" email="welfare@studentrobotics.org"];
 	pr_coord [label="PR Coordinator" email="pr@studentrobotics.org"];
