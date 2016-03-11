@@ -20,8 +20,12 @@ class Role(object):
         if v is None:
             return ""
 
+        v = v.replace("\\n", " ")
+
         if v.startswith('"') and v.endswith('"'):
             return v[1:-1]
+        else:
+            return v
 
     @staticmethod
     def sanitize_bool(b):

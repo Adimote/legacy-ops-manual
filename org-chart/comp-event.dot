@@ -1,21 +1,21 @@
 digraph {
 	# Competition Coordinator Subordinates
-	comp_event_coord [label="Competition Event Coordinator" email="competition-event@studentrobotics.org"];
+	comp_event_coord [label="Competition Event\nCoordinator" email="competition-event@studentrobotics.org"];
 
 	# Competition Event Coordinator Subordinates
-	reward_manager[label="Reward Manager" contactsexclude=true];
-	comp_volunteer_welfare[label="Competition Volunteer Welfare Coordinator" email="competition-welfare@studentrobotics.org"];
-	prod_manager[label="Production Manager" email="production-manager@studentrobotics.org"];
-	comp_team_coord[label="Competition Team Coordinator" email="competition-teams@studentrobotics.org"];
-	comp_game_vol_coord[label="Game Volunteer Coordinator" email="game-volunteers@studentrobotics.org"];
-	comp_sw_ops_coord[label="Competition Software Operations Coordinator" email="competition-software-ops@studentrobotics.org"];
-	comp_team_support_coord[label="Competition Team Support Coordinator" email="competition-team-support@studentrobotics.org"];
-	comp_hs_coord[label="Competition H&S Coordinator" email="competition-health-and-safety@studentrobotics.org"];
+	reward_manager[label="Reward\nManager" contactsexclude=true];
+	comp_volunteer_welfare[label="Competition Volunteer\nWelfare Coordinator" email="competition-welfare@studentrobotics.org"];
+	prod_manager[label="Production\nManager" email="production-manager@studentrobotics.org"];
+	comp_team_coord[label="Competition Team\nCoordinator" email="competition-teams@studentrobotics.org"];
+	comp_sw_ops_coord[label="Competition Software\nOperations Coordinator" email="competition-software-ops@studentrobotics.org"];
+	comp_team_support_coord[label="Competition Team\nSupport Coordinator" email="competition-team-support@studentrobotics.org"];
+	comp_hs_coord[label="Competition H&S\nCoordinator" email="competition-health-and-safety@studentrobotics.org"];
+	comp_game_vol_coord[label="Game Volunteer\nCoordinator" email="game-volunteers@studentrobotics.org"];
 
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
 	commentators[label="Commentators" email="commentators@studentrobotics.org"];
-	head_match_scorer[label="Head Match Scorer" email="match-scorer@studentrobotics.org"];
+	head_match_scorer[label="Head Match\nScorer" email="match-scorer@studentrobotics.org"];
 	judges[label="Judges" email="judge@studentrobotics.org"];
 
 	###### Connections between nodes

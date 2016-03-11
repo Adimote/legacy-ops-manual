@@ -11,3 +11,6 @@ roles.csv: $(ROLE_DOT_FILES)
 
 org-chart/%.pdf: org-chart/%.dot
 	dot $^ -Tpdf > $@
+
+org-chart/comp-event.pdf: org-chart/comp-event.dot
+	unflatten -l 3 $^ | dot -Tpdf > $@

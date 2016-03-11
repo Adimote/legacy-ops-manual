@@ -1,21 +1,21 @@
 digraph {
 	####### Node declarations
-	comp_prog_coord [label="Competition Programme Coordinator" email="competition-program@studentrobotics.org"];
+	comp_prog_coord [label="Competition Programme\nCoordinator" email="competition-program@studentrobotics.org"];
 	
 	# Competition Coordinator Subordinates
-	comp_event_coord [label="Competition Event Coordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-event.dot
-	game_design_coord [label="Game Design Coordinator" email="game-design@studentrobotics.org"];
-	kickstart_event_coord [label="Kickstart Events Coordinator" email="kickstart@studentrobotics.org"];
+	comp_event_coord [label="Competition Event\nCoordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-event.dot
+	game_design_coord [label="Game Design\nCoordinator" email="game-design@studentrobotics.org"];
+	kickstart_event_coord [label="Kickstart Events\nCoordinator" email="kickstart@studentrobotics.org"];
 	team_coord [label="Team Coordinator" email="teams@studentrobotics.org"];
 	kit [label="Kit Coordinator" email="kit@studentrobotics.org"];
 	
 	### Fourth Level
 	
 	# Kickstart Event Coordinator Subordinates
-	local_ks_event_coord[label="Local Kickstart Event Coordinator" color=blue style=dashed contactsexclude=true];
-	local_activity_coord[label="Local Activity Coordinator" color=blue style=dashed contactsexclude=true];
+	local_ks_event_coord[label="Local Kickstart\nEvent Coordinator" color=blue style=dashed contactsexclude=true];
+	local_activity_coord[label="Local Activity\nCoordinator" color=blue style=dashed contactsexclude=true];
 	
-	local_team_coord[label="Local Team Coordinator" color=blue style=dashed contactsexclude=true];
+	local_team_coord[label="Local Team\nCoordinator" color=blue style=dashed contactsexclude=true];
 
 	# Kit Coordinator Subordinates
 	kit_dev[label="Dev" fillcolor=yellow style=filled contactsexclude=true];

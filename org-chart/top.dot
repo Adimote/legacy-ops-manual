@@ -4,12 +4,12 @@ digraph {
 	trustees [label="Trustees" email="trustees@studentrobotics.org"];
 	
 	### Second level
-	comp_prog_coord [label="Competition Programme Coordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-prog.dot
-	fund_coord [label="Fundraising Coordinator" email="fundraising@studentrobotics.org"];
+	comp_prog_coord [label="Competition Programme\nCoordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-prog.dot
+	fund_coord [label="Fundraising\nCoordinator" email="fundraising@studentrobotics.org"];
 	treasurers [label="Treasurers" email="treasurers@studentrobotics.org"];
+	internet_owner [label="Internet\nOwner" email="internet@studentrobotics.org"];
+	welfare_coord [label="Welfare\nCoordinator" email="welfare@studentrobotics.org"];
 	pr_coord [label="PR Coordinator" email="pr@studentrobotics.org"];
-	internet_owner [label="Internet Owner" email="internet@studentrobotics.org"];
-	welfare_coord [label="Welfare Coordinator" email="welfare@studentrobotics.org"];
 	
 	### Third Level
 	
@@ -18,7 +18,7 @@ digraph {
 	graphic_design [label="Graphic Design" fillcolor=yellow style=filled contactsexclude=true];
 	
 	# Welfare Coordinator Subordinates
-	vol_rec_coord[label="Volunteer Recruitment Coordinator" email="volunteer-recruitment@studentrobotics.org"];
+	vol_rec_coord[label="Volunteer Recruitment\nCoordinator" email="volunteer-recruitment@studentrobotics.org"];
 	
 	###### Connections between nodes
 	
