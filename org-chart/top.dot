@@ -15,7 +15,6 @@ digraph {
 	
 	# PR Coordinator Subordinates
 	pr_web_tech [label="PR Web Tech" fillcolor=yellow style=filled contactsexclude=true];
-	graphic_design [label="Graphic Design" fillcolor=yellow style=filled contactsexclude=true];
 	
 	# Welfare Coordinator Subordinates
 	vol_rec_coord[label="Volunteer Recruitment\nCoordinator" email="volunteer-recruitment@studentrobotics.org"];
@@ -24,6 +23,6 @@ digraph {
 	
 	trustees -> { comp_prog_coord fund_coord head_treasurer pr_coord internet_owner welfare_coord };
 	
-	pr_coord -> { pr_web_tech graphic_design };
+	pr_coord -> { pr_web_tech };
 	welfare_coord -> { vol_rec_coord };
 }
