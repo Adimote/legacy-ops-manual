@@ -22,7 +22,7 @@ digraph {
 	# Kit Coordinator Subordinates
 	kit_hw_coord[label="Kit Hardware\nCoordinator" email="kit-hardware@studentrobotics.org"];
 	kit_sw_coord[label="Kit Software\nCoordinator" email="kit-software@studentrobotics.org"];
-	kit_shipping_coord[label="Kit Shipping\nCoordinator" email="kit-shipping@studentrobotics.org"];
+	kit_logistics_coord[label="Kit Logistics\nCoordinator" email="logistics@studentrobotics.org"];
 
 	# Hardware Coordinator Subordinates
 	hw_dev_coord[label="HW Development\nCoordinator" contactsexclude=true];
@@ -46,7 +46,7 @@ digraph {
 	team_coord -> local_team_coord;
 	local_team_coord -> mentors;
 		
-	kit_coord -> { kit_hw_coord kit_sw_coord kit_shipping_coord};
+	kit_coord -> { kit_hw_coord kit_sw_coord kit_logistics_coord};
 	kit_hw_coord -> { hw_dev_coord hw_manu_coord };
 }
 		      
