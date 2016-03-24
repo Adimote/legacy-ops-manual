@@ -39,8 +39,9 @@
 % arg1: role id
 \newenvironment{roledesc}[1]
 {
-  \newenvironment{responsibilities}{\paragraph{Responsibilities}\begin{enumerate}}{\end{enumerate}}
-  \newenvironment{services}{\paragraph{Services}\begin{itemize}}{\end{itemize}}
+  \addtokomafont{minisec}{\mdseries\itshape}
+  \newenvironment{responsibilities}{\minisec{Responsibilities}\begin{enumerate}}{\end{enumerate}}
+  \newenvironment{services}{\minisec{Services}\begin{itemize}}{\end{itemize}}
   \roledescsection{\roletitle{#1}}
   \label{role:#1}
   \framebox[\textwidth]{Email: \roleemail{#1}\hfill Tel: \roletel{#1}}
