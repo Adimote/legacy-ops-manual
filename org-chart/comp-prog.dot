@@ -25,7 +25,7 @@ digraph {
 
 	# Hardware Coordinator Subordinates
 	hw_dev_coord[label="Hardware\nDevelopment\nCoordinator" email="hardware-dev@studentrobotics.org"];
-	hw_manu_coord[label="Hardware Manufacture\n& Maintenance\nCoordinator" email="hardware-manufacture@studentrobotics.org"];
+	hw_prod_coord[label="Hardware\nProduction\nCoordinator" email="hardware-production@studentrobotics.org"];
 	
 	### Fifth Level
 	local_presenter[label="Local Presenter" color=blue style=dashed contactsexclude=true];
@@ -45,6 +45,6 @@ digraph {
 	team_coord -> local_team_coord;
 	local_team_coord -> mentors;
 		
-	kit_coord -> { hw_dev_coord hw_manu_coord kit_sw_coord kit_logistics_coord};
+	kit_coord -> { hw_dev_coord hw_prod_coord kit_sw_coord kit_logistics_coord};
 }
 		      
