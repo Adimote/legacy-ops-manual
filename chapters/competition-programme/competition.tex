@@ -37,57 +37,29 @@ From a team's perspective, the competition consists of the following sections:
 \end{enumerate}
 
 \subsection{Game Orchestration}
+
+A large number of matches are scheduled to be played throughout each competition.  Many volunteers work together to ensure that these games run on schedule, are scored fairly, and are enjoyable for teams to participate in.
+
+Since matches run on a tight schedule, left unchecked teams would turn up to many of their matches late, and therefore miss their opportunity to play in them.  The distraction of working on their robot is also a major factor here.  To help teams miss as few matches as possible, a ``shepherding'' scheme is run.  The scheme, run by the \role{head-shepherd}, aims to ensure that teams arrive at their matches on time.
+
+Teams must turn up to their match in advance of it starting.  If they turn up later than a cut-off time before their match starts, then they must not be permitted to enter into the match.  Whilst this may seem harsh, it is generally the case that bringing teams in later into a match causes issues with matches having to be started late, which would reduce the enjoyment of the event for everyone else.  When teams arrive for their match, they should bring their robot into a ``staging area''.  Only one representative from each team should be allowed in this area at a time, and they should be tasked with placing their robot in the arena before the match begins.
+
+The experience of watching a match should be enhanced by commentators.  The role of the commentators is to make the match more interesting to watch, maintaining the audience's interest and enthusiasm throughout each match.
+
+The arenas in which the robots play the game need to be well lit throughout each match, so that spectators can see the robots and the robots can see the arena.  In between matches, lighting effects may be used to improve the contrast between when a match is running and when it is not.
+
+Music should also be played throughout the event to bring an exciting atmosphere to the competition.  If songs are played so they begin with each match, then this further improves the contrast between matches.  Music should be used to increase the intensity of the competition so that the final knockout match is as enjoyable as possible.
+
+The \role{head-match-scorer} is responsible for ensuring that the results of each of the games played throughout the event are collected.  These will ultimately be entered into the scoring system provided as part of the software managed by the \roletitle{comp-sw-ops-coord}.
+
+No people should enter the arena whilst a match is in play.  However, there are some exceptional circumstances in which a volunteer, who is managed by the \roletitle{head-match-scorer}, may enter into the arena during a match to turn a robot off.  The circumstances in which a robot will need to be turned off during a match are as follows:
 \begin{enumerate}
-\item Game Orchestration
-  \begin{enumerate}
-  \item Shepherding:
-    \begin{enumerate}
-    \item Teams should be:
-      \begin{enumerate}
-      \item Ready for their match at the arena entrance well in advance of the match start.
-      \item Reminded by shepherding volunteers when their match is due to start.
-      \end{enumerate}
-
-    \item Only one team member allowed into staging area with robot at time.
-    \end{enumerate}
-
-  \item Judging
-    \begin{enumerate}
-    \item Sometimes there will be uncertainty surrounding the score a team should be awarded for a match.  This should be resolved by a judge.  Only one judge will be on duty at a time, and must:
-      \begin{enumerate}
-      \item Record any decision they have made in a journal that is to be passed to the subsequent judges who are duty.  This is to maintain consistency of decisions.
-      \end{enumerate}
-    \item As rules say: Judge's decision is final.
-    \end{enumerate}
-
-  \item Match scorers
-    \begin{enumerate}
-    \item Match scorers collect score data at end of game
-    \item Teams may ``throw in the towel'' during a game.  In the event that a team does this, the match scorer must turn their robot off, and the team must forfeit all points from the match.
-    \item Match Scorers must stay out of the arena throughout the game.  If they have to enter the arena to turn off a robot, they must take the shortest route through the arena that avoids blocking the view of other robots of the arena.
-    \end{enumerate}
-
-  \item Commentating
-    \begin{enumerate}
-    \item Maintain interest and enthusiasm throughout games.
-    \item Commentators must only do a maximum of a 2 hour shift, and have a break of at least 1 hour after that.
-    \end{enumerate}
-
-
-  \item Lighting
-    \begin{enumerate}
-    \item Sync'ed to matches
-    \item All white lights during matches
-    \item Lighting effects between matches
-    \end{enumerate}
-
-  \item Music
-    \begin{enumerate}
-    \item Sync'ed to matches
-    \end{enumerate}
-
-  \end{enumerate}
+\item If a team ``throws in the towel'' during a match.  Note that teams must forfeit all points from a match if they do this.
+\item If a robot is damaging another robot, the arena, or props within the arena.
 \end{enumerate}
+When entering the arena during a match to turn off a robot, the volunteer must be particularly careful not to disturb the actions of another robot.  Computer vision and other remote sensing technologies are employed by robots, so the volunteer should try to ensure they are not disrupting the data collected by those systems.
+
+Sometimes uncertainty arises around the score that a team should be awarded for a match.  These uncertain situations must be resolved by one of the \roletitle{judges}.  In order to maintain consistency between these resolutions, judges must keep a record of them in a journal that is shared between all of the judges.
 
 \subsection{Scheduling}
 \begin{enumerate}
