@@ -27,30 +27,57 @@ Not only does this minimum viable robot remove any barrier to entry, it allows t
     \item The kit must be rugged and robust to accidental damage.
     \item{Consist of commercial off the shelf (COTS) parts where appropriate.}
   \end{enumerate}
-\item Development
+\item Development philosophy
+  \begin{enumerate}
+    \item The kit generally consists of electronic hardware (including firmware), mechanical hardware, systems software and user software.
+    \item Teams will directly interact with the electronic hardware, the mechanical hardware and the user software therefore its design and development must be well defined and controlled to ensure consistency and ease of use.
+    \item The firmware and systems software is not directly visible to the teams. This must be robust and well tested, but ease of use for the teams is not a priority.
+  \end{enumerate}
+\item Development Process
   \begin{enumerate}
     \item Money is available for new kit development
-    \item A new kit item proposal is required when looking to develop new bits of kit. This proposal must include:
+    \item A new kit item proposal is required when starting to develop a new bit of team-facing kit. This proposal must include:
       \begin{enumerate}
+        \item The name of the lead developer.
         \item A description of the item.
         \item The functionality it provides to teams.
-        \item A review of COTS products providing similar functionality and reasons why these are not suitable.
-        \item The estimated development cost.
-        \item The estimated production cost per kit.
-        \item The estimated annual maintenance cost per kit (including consumable parts).
+        \item Example user stories to allow later assessment of suitability to fulfil requirements.
         \item An estimate of the development time required.
         \item A development plan showing design review points.
-        \item The name of the lead developer.
+        \item In the case of electronic or mechanical hardware proposals:
+          \begin{enumerate}
+            \item A review of COTS products providing similar functionality and reasons why these are not suitable.
+            \item The estimated development cost.
+            \item The estimated production cost per kit.
+            \item The estimated annual maintenance cost per kit (including consumable parts).
+          \end{enumerate}
+        \item In the case of systems or user facing software proposals:
+          \begin{enumerate}
+            \item The scope of the software and how/where it will interface with existing software.
+            \item An estimate of new dependencies required (new libraries being pulled in, etc.)
+            \item The testing methodology to be used.
+          \end{enumerate}
       \end{enumerate}
-    \item Proposals for new kit development must be reviewed and accepted by the \role{kit-coord} before money is allocated for development.
-    \item Once developed, a final kit addition proposal is required. This proposal must include:
+    \item Proposals for new kit development must be reviewed and accepted by the \role{kit-coord} before money is allocated for development. No new bits of hardware or software will be included in the kit without approval from the \role{kit-coord}.
+    \item Once development is completed a final kit addition proposal is required. This proposal must include:
       \begin{enumerate}
-        \item A reviewed estimated production cost per kit. This will be more accurate than the initial estimate due to the design being complete.
-        \item A reviewed annual maintenance cost per kit.
-        \item A manufacturing plan including a final deadline. If the new bit of kit is not fully manufactured, tested and entered into the inventory before this date then it will not ship in the next competition year.
+        \item A review of the original new kit item proposal showing how the developed item fulfils the user stories and provides the functionality specified.
+        \item Links to the source of the hardware/software developed including any new documentation.
+        \item In the case of electronic or mechanical hardware:
+          \begin{enumerate}
+            \item A reviewed estimated production cost per kit. This will be more accurate than the initial estimate due to the design being complete.
+            \item A reviewed annual maintenance cost per kit.
+            \item A manufacturing plan including a final deadline. If the new bit of kit is not fully manufactured, tested and entered into the inventory before this date then it will not ship in the next competition year.
+          \end{enumerate}
+        \item In the case of systems or user facing software:
+          \begin{enumerate}
+            \item A list of new dependencies and how they will be managed.
+            \item A review of the testing carried out.
+            \item A plan for ongoing testing.
+          \end{enumerate}
       \end{enumerate}
-    \item Final designs must be approved by the \role{kit-coord} before it enters into the kit and therefore manufacturing.
-    \item As with all engineering the kit must be optimised for:
+    \item Final designs must be approved by the \role{kit-coord} before it enters into the kit and therefore, in the case of hardware, manufacturing.
+    \item As with all engineering the hardware parts of the kit must be optimised for:
       \begin{enumerate}
         \item Ease of manufacture
         \item Ease of initial test
@@ -61,9 +88,9 @@ Not only does this minimum viable robot remove any barrier to entry, it allows t
       \end{enumerate}
     \item Various documentation is required for kit:
       \begin{enumerate}
-        \item Manufacturing
-        \item Maintenance
-        \item Use (end user)
+        \item Manufacturing (only applicable to hardware).
+        \item Maintenance (only applicable to hardware).
+        \item End user (applicable to hardware and software).
       \end{enumerate}
   \end{enumerate}
 \item Manufacture
