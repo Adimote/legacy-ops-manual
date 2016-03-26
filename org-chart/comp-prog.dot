@@ -20,13 +20,12 @@ digraph {
 	local_team_coord[label="Local Team\nCoordinator" color=blue style=dashed contactsexclude=true];
 
 	# Kit Coordinator Subordinates
-	kit_hw_coord[label="Kit Hardware\nCoordinator" email="kit-hardware@studentrobotics.org"];
 	kit_sw_coord[label="Kit Software\nCoordinator" email="kit-software@studentrobotics.org"];
 	kit_logistics_coord[label="Kit Logistics\nCoordinator" email="logistics@studentrobotics.org"];
 
 	# Hardware Coordinator Subordinates
-	hw_dev_coord[label="HW Development\nCoordinator" contactsexclude=true];
-	hw_manu_coord[label="HW Manufacture\n& Maintenance Coordinator" contactsexclude=true];
+	hw_dev_coord[label="Hardware\nDevelopment\nCoordinator" email="hardware-dev@studentrobotics.org"];
+	hw_manu_coord[label="Hardware Manufacture\n& Maintenance\nCoordinator" email="hardware-manufacture@studentrobotics.org"];
 	
 	### Fifth Level
 	local_presenter[label="Local Presenter" color=blue style=dashed contactsexclude=true];
@@ -46,7 +45,6 @@ digraph {
 	team_coord -> local_team_coord;
 	local_team_coord -> mentors;
 		
-	kit_coord -> { kit_hw_coord kit_sw_coord kit_logistics_coord};
-	kit_hw_coord -> { hw_dev_coord hw_manu_coord };
+	kit_coord -> { hw_dev_coord hw_manu_coord kit_sw_coord kit_logistics_coord};
 }
 		      
