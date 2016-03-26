@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+from subprocess import check_output
+import sys
+
+def list_authors():
+    for line in check_output("""git log --format="%aN, %aE" | sort -u""",
+                             shell=True) \
+                             .decode(sys.stdout.encoding) \
+                             .splitlines():
+        name, email = [x.strip() for x in line.split(",")]
+        yield "\href{{mailto:{email}}}{{{name}}}".format(
+            email=email.strip(),
+            name=name.strip()
+        )
+
+authors = list(list_authors())
+
+print (*authors[:-1], sep=", ", end=" ")
+print ("and ", authors[-1], ".", sep="")

@@ -7,13 +7,20 @@ INC_FILES := role.sty
 
 all: ops-manual.pdf
 
+GIT_COMMIT := $(shell git rev-parse --verify HEAD)
+
+.git_commit: force
+	@echo $(GIT_COMMIT) | cmp -s - $@ || echo $(GIT_COMMIT) > $@
+
+CLEAN_FILES += .git_commit
+
 include ./*/include.mk
 
 ops-manual.pdf: $(TEX_FILES) $(INC_FILES)
 	xelatex ops-manual.tex
 	xelatex ops-manual.tex
 
-.PHONY: clean
+.PHONY: clean force
 
 clean:
 	-rm -f ops-manual.pdf
