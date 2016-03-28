@@ -195,77 +195,35 @@ Much of the kit that SR provides to teams is on loan to them.  This needs return
 
 \begin{enumerate}
 \item At the end of the competition event itself.
-\item By courier, within 30 days after the competition.  The courier service used by teams for this return must be sufficiently insured.  Teams must be provided with guidance on how to pack their kit for postage.
+\item Returned by commercial courier by the 1\textsuperscript{st} June of the same year that the competition is being held in.  The courier service used by teams for this return must be sufficiently insured.  Teams must be provided with guidance on how to pack their kit for postage.
 \end{enumerate}
 
 \subsection{Competition Software}
 
+At the competition, everyone in attendance needs to know various pieces of information about the things that are happening at the event.  These include:
 \begin{enumerate}
-\item Throughout the event, everyone in attendance will want to have access to the following data:
-  \begin{enumerate}
-  \item Match schedule
-  \item Scores:
-    \begin{enumerate}
-    \item League
-    \item Knockout
-    \end{enumerate}
-  \end{enumerate}
-  The competition software provides this to them.
+\item The match schedule.  This is obviously particularly important to teams, as they need to know when to turn up to their matches.  It is also important to the team managed by the \role{comp-game-vol-coord}.
+\item The current scores of each of the teams, in both the league and the knockout.
+\end{enumerate}
+These pieces of information are provided to teams through the ``competition software'', which is managed by the \roletitle{comp-sw-ops-coord}.
 
-\item The competition software must also:
-  \begin{enumerate}
-  \item Provide mechanism for information from match scorers to be entered, and amended.
-  \item Allow for matches to be delayed as part of the schedule.
-  \end{enumerate}
+The competition software must provide a mechanism through which the \role{head-match-scorer}, and their team, may enter and amend match scoring data from matches that have been played.  This scoring data should consist of arena state information, from which the software will derive the scores.
 
-\item Match Scheduling:
+The competition software must provide match clocks that are designed 
+
+The competition software fulfils the important role of scheduling the matches that occur at the competition.  This match scheduler must comply with the following requirements:
+\begin{enumerate}
+\item All matches in all arenas must begin simultaneously.
+\item A team's league matches should be well-distributed throughout the event.
+\item A team should face as many other teams as possible in league matches.
+\item Throughout the event, a team should experience a wide selection of initial conditions (e.g. the corner that they start in).
+\item Time must be allocated between matches to allow for scoring, the resetting of arena props, and robot removal and installation.
+\item The following requirements apply to the knockout:
   \begin{enumerate}
-  \item The competition software should allow a team's matches to be scheduled to comply with the following requirements:
-    \begin{enumerate}
-    \item All matches in all arenas must begin simultaneously.
-    \item A team's league matches should be well-distributed throughout the event.
-    \item A team should face as many other teams as possible in matches throughout the league.
-    \item Throughout the event, a team should experience a wide selection of initial conditions (e.g. the corner that they start in).
-    \item The knockout:
-      \begin{enumerate}
-      \item Must begin with all teams
-      \item Should begin in all arenas, but have quarter finals in only the main arena
-      \end{enumerate}
-    \item Time must be allocated between matches to allow for:
-      \begin{enumerate}
-      \item Scoring
-      \item Arena reset
-      \item Robot removal and installation
-      \end{enumerate}
-    \end{enumerate}
+  \item The first round of the knockout must contain all teams, rather than a subset.
+  \item The quarter finals, semi finals and finals must be scheduled to occur only in the main arena.  The other rounds of the knockout should use all available arenas.
   \end{enumerate}
 
+\item The scheduler must provide a facility for delaying matches, so that if there are issues during the competition then the event can continue to run.
 \end{enumerate}
 
-
-
-
-
-
-
-This chapter should contain:
-\begin{enumerate}
-
-\item Team Management
-  \begin{enumerate}
-  \item Batteries and chargers off at beginning of event
-  \end{enumerate}
-
-\item Battery Charging
-
-\item Information that must be published in advance, and how far in advance each piece must be published:
-  \begin{enumerate}
-  \item Risk assessment for teams
-  \item Match schedule
-  \item Location
-  \item Food
-  \item Parking
-  \end{enumerate}
-
-\item Results publishing after event
-\end{enumerate}
