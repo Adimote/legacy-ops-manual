@@ -209,11 +209,11 @@ At the competition, everyone in attendance needs to know various pieces of infor
 \item The match schedule.  This is obviously particularly important to teams, as they need to know when to turn up to their matches.  It is also important to the team managed by the \role{comp-game-vol-coord}.
 \item The current scores of each of the teams, in both the league and the knockout.
 \end{enumerate}
-These pieces of information are provided to teams through the ``competition software'', which is managed by the \roletitle{comp-sw-ops-coord}.
+These pieces of information are provided to teams through the ``competition software'', which is managed by the \roletitle{comp-sw-ops-coord}.  The match schedule must be available to teams before the competition begins.
 
 The competition software must provide a mechanism through which the \role{head-match-scorer}, and their team, may enter and amend match scoring data from matches that have been played.  This scoring data should consist of arena state information, from which the software will derive the scores.
 
-The competition software must provide match clocks that are designed 
+The competition software must provide a clock system that allows the audience of a match to see how much time is left in the current match.  This system must also indicate how much time is left before the next match starts, so that the match may start on time.
 
 The competition software fulfils the important role of scheduling the matches that occur at the competition.  This match scheduler must comply with the following requirements:
 \begin{enumerate}
@@ -228,6 +228,6 @@ The competition software fulfils the important role of scheduling the matches th
   \item The quarter finals, semi finals and finals must be scheduled to occur only in the main arena.  The other rounds of the knockout should use all available arenas.
   \end{enumerate}
 
-\item The scheduler must provide a facility for delaying matches, so that if there are issues during the competition then the event can continue to run.
+\item The first few matches of the event must have more time between them to allow for any game orchestration issues to be handled.
+\item The scheduler must provide a facility for delaying matches, so that if there are issues during the competition then the event can continue to run.  If the delay becomes significant, 
 \end{enumerate}
-
