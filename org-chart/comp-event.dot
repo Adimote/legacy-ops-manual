@@ -10,7 +10,7 @@ digraph {
 	comp_sw_coord[label="Competition Software\nCoordinator" email="competition-software@studentrobotics.org"];
 	comp_team_support_coord[label="Competition Team\nSupport Coordinator" email="competition-team-support@studentrobotics.org"];
 	comp_hs_coord[label="Competition H&S\nCoordinator" email="competition-health-and-safety@studentrobotics.org"];
-	comp_game_vol_coord[label="Game Volunteer\nCoordinator" email="game-volunteers@studentrobotics.org"];
+	comp_match_coord[label="Match\nCoordinator" email="matches@studentrobotics.org"];
 
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
@@ -20,10 +20,10 @@ digraph {
 
 	###### Connections between nodes
 	comp_event_coord -> { reward_manager comp_volunteer_welfare
-	            prod_manager comp_team_coord comp_game_vol_coord
+	            prod_manager comp_team_coord comp_match_coord
 		comp_sw_coord comp_hs_coord
 		comp_team_support_coord
 		};
 
-	comp_game_vol_coord -> { head_shepherd commentators head_match_scorer judges };
+	comp_match_coord -> { head_shepherd commentators head_match_scorer judges };
 }
