@@ -101,6 +101,17 @@ Not only does this minimum viable robot remove any barrier to entry, it allows t
         \item Kit remote software includes all software used by teams in the process of developing their robot that does not run on the components of the kit.
         \item The development of kit remote software is the least critical of all kit components since it is reasonably trivial to update it throughout the year.
         \item Before starting development of a new feature or piece of software the \role{kit-sw-coord} should be consulted to ensure that it will be useful and how it may be incorporated into the existing infrastructure.
+        \item All kit remote software should provide an API. The API should be the only way of interacting with the service and it should be expected that teams will be using the API.
+      \end{enumerate}
+    \item General software development
+      \begin{enumerate}
+        \item APIs of all kit software must remain stable for the duration of the Competition Programme Year. That is, from Kickstart to the kit return deadline.
+        \item API stability is defined as:
+          \begin{enumerate}
+            \item Methods/interfaces must not be renamed without providing a backwards compatible alias.
+            \item The functionality of methods/interfaces must remain the same.
+            \item New methods/interfaces must not affect the functionality of existing methods/interfaces.
+          \end{enumerate}
       \end{enumerate}
   \end{enumerate}
 
