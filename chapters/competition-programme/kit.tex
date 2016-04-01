@@ -88,16 +88,6 @@ Not only does this minimum viable robot remove any barrier to entry, it allows t
         \item Kit local software includes all software, written and maintained by SR, that runs on components of the kit. This includes firmware.
         \item The development of kit local software is considered to be less critical than that of the electronic and mechanical hardware since in the majority of cases it can be updated during the competition year.
         \item A very small amount of kit local software cannot be updated during the competition year, for example bootloaders. The \role{kit-sw-coord} is responsible for defining which software is highly critical. Changes to this highly critical software must be reviewed and approved by the \role{kit-sw-coord}.
-        \item A new kit local software proposal is required when implementing new features into existing software or when developing a new piece of software. (\emph{TODO: need to define 'piece of software' more}) This proposal must include:
-          \begin{enumerate}
-            \item The name of the lead developer.
-            \item A description of the new feature or piece of software.
-            \item The scope of the software and how/where it will interface with existing software.
-            \item The testing methodology to be used.
-            \item Any potential legal implications.
-          \end{enumerate}
-        \item Development of software may be carried out without submitting a proposal, however it will not be included in the kit until a proposal has been submitted and approved by the \role{kit-coord}.
-        \item When the new feature or piece of software is ready for inclusion in the kit the \role{kit-coord} must verify that the potential legal implications specified in the original proposal have been suitably dealt with.
       \end{enumerate}
     \item Kit remote software
       \begin{enumerate}
@@ -108,6 +98,12 @@ Not only does this minimum viable robot remove any barrier to entry, it allows t
       \end{enumerate}
     \item General software development
       \begin{enumerate}
+        \item Each piece of software, as defined by the \role{kit-sw-coord}, must maintain the following documentation alongside the source code:
+          \begin{enumerate}
+            \item A description of the piece of software, including its scope and how/where it will interface with existing software.
+            \item Any potential legal implications.
+          \end{enumerate}
+        \item Prior to the release of a new version of the software the \role{kit-sw-coord} must verify that there are no new potential legal implications due to the new features and that all of the existing potential legal implications have been suitably dealt with.
         \item APIs of all kit software must remain stable for the duration of the Competition Programme Year. That is, from Kickstart to the kit return deadline.
         \item API stability is defined as:
           \begin{enumerate}
