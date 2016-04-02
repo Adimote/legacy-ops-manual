@@ -1,0 +1,18 @@
+#!/usr/bin/env python3
+from subprocess import check_output
+import sys
+
+try:
+    version = check_output("git describe --tags --dirty",
+                           shell=True,
+                           stderr=open("/dev/null", "w" )) \
+                           .decode(sys.stdout.encoding) \
+                           .strip()
+except:
+    # Failed to get a tag
+    print("UNKNOWN")
+    exit(1)
+
+# Strip the "v" off the front:
+print(version[1:])
+
