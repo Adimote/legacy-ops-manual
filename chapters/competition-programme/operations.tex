@@ -85,6 +85,8 @@ The roles shown circled in dashed blue are special in that there are multiple in
   \item Ensuring that each \role{local-team-coord} is not managing more than 10 teams.
   \item Bringing in new \role{local-team-coord}s to recruit teams in areas where SR currently has no teams.
   \item The sending of announcements to all teams (i.e. not those that go to a specific team).  Any responses to these from teams should be dealt with by the appropriate \roletitle{local-team-coord}.
+  \item Allocating Production Kits to Teams.
+  \item Allocating Local Kits to \roletitle{local-team-coord}s.
   \end{responsibilities}
 \end{roledesc}
 
@@ -96,6 +98,7 @@ The roles shown circled in dashed blue are special in that there are multiple in
   \item Ensuring that their teams are well-informed throughout the year.
   \item Redirecting queries from a team to the appropriate support system.
   \item Recruiting new teams in the area they are responsible for.
+  \item Reporting broken or damaged kit to the \role{kit-support-coord}.
   \end{responsibilities}
 
   Note that a \roletitle{local-team-coord} is \textit{not} expected to field every request that a team makes.  If a team is requesting something that is not provided as a service by SR, then it is entirely reasonable for the \roletitle{local-team-coord} to respond with a message indicating that this is not something that SR is able to assist with.
@@ -117,7 +120,11 @@ The roles shown circled in dashed blue are special in that there are multiple in
     \item{Ensuring that the Kit is functional and complete well in advance of Kickstart.}
     \item{Ensuring that the technical features of the Kit are both sufficient for the Game designed by the \role{game-design-coord} and meet expectations based upon the state of the art.}
     \item{Ensuring that the Kit is safe to use.}
-    \item{Provide support to teams using the Kit throughout the year.}
+    \item Approve the technical and safety regulations in the rules of the next competition year's Game.
+    \item Allocate Development Kits and development tools
+    \item Approve final hardware (electronic and mechanical) prior to manufacture and inclusion in the kit.
+    \item Evaluate potential legal implications of software (local and remote) prior to release.
+    \item Advise \role{local-team-coord}s of the couriering details for kits not collected at Kickstart.
   \end{responsibilities}
 \end{roledesc}
 
@@ -126,6 +133,7 @@ The roles shown circled in dashed blue are special in that there are multiple in
     \item{Research of new hardware ideas.}
     \item{Development and testing of new hardware.}
     \item{Debugging of existing hardware.}
+    \item Approval of new kit proposals to release money for development.
     \item{The creation and maintenance supporting documentation for hardware including:
         \begin{itemize}
           \item{End-user documentation.}
@@ -137,7 +145,9 @@ The roles shown circled in dashed blue are special in that there are multiple in
 
 \begin{roledesc}{hw-prod-coord}
   \begin{responsibilities}
-    \item{Manufacture of new hardware (including batches of existing designs) well in advance of Kickstart.}
+    \item{Manufacture of new hardware ready for inclusion in the kit.}
+    \item Manufacture of whole new kits (all classes) in preparation for the next Competition Programme Year.
+    \item Ensuring that spare kit is replenished as it is used up.
     \item{Performing maintenance on existing hardware between the Competition and Kickstart through the running of two events:
       \begin{itemize}
         \item{Collation, where returned Kits are unpacked. Items are collated and the condition of them is assessed.}
@@ -152,11 +162,13 @@ The roles shown circled in dashed blue are special in that there are multiple in
   \begin{responsibilities}
     \item{Development of kit related software including:
       \begin{itemize}
-        \item{Software that will run on the kit hardware, e.g. firmware, and python libraries.}
-        \item{Software that aids teams with developing their robots, e.g. IDEs, debuggers, and simulators.}
-        \item{Documentation system.}
+        \item{Software that will run on the kit hardware, e.g. firmware, and python libraries. Known as Kit Local Software}
+        \item{Software that aids teams with developing their robots but does not run on the kit hardware, e.g. IDEs, debuggers, and simulators. Known as Kit Remote Software}
       \end{itemize}
+    \item Defining the overall architecture of SR software such that software falls into clearly defined projects.
     }
+    \item Defining certain projects as critical - those which are difficult, if not impossible, to update during the Competition Programme Year.
+    \item Approving changes to critical software projects.
     \item{Writing of support documentation including:
       \begin{itemize}
         \item{APIs that the kit provides to teams.}
@@ -164,19 +176,23 @@ The roles shown circled in dashed blue are special in that there are multiple in
         \item{APIs of software that aids teams with developing their robots.}
       \end{itemize}
     }
-    \item{Providing support to teams on matters related to the kit software.}
   \end{responsibilities}
 \end{roledesc}
 
 \begin{roledesc}{kit-logistics-coord}
   \begin{responsibilities}
-    \item{Managing inventory of Kit including:}
+    \item{Managing the inventory of SR assets including:}
       \begin{itemize}
         \item{Ensuring that the inventory is representative of reality.}
         \item{Removal of assets from the inventory after disposal.}
       \end{itemize}
-    \item{Ensuring that all localities hosting a Kickstart event have the correct Kits shipped to them prior to Kickstart.}
-    \item{Shipping replacement parts to Teams when instructed to do so by the \role{kit-support-coord}.}
+    \item Storage, tracking (updating physical location in the inventory) and shipping of all assets including:
+      \begin{itemize}
+        \item{Ensuring that all localities hosting a Kickstart event have the correct Kits shipped to them prior to Kickstart.}
+        \item{Shipping replacement parts to Teams when instructed to do so by the \role{kit-support-coord}.}
+        \item Shipping of non-kit assets such as competition hardware.
+      \end{itemize}
+    \item Ensuring that kits non collected at Kickstart are available for courier collection no later than two weeks after Kickstart.
     \item{Securing the timely return of Kits not handed back at the Competition.}
   \end{responsibilities}
 \end{roledesc}
@@ -185,7 +201,7 @@ The roles shown circled in dashed blue are special in that there are multiple in
   \begin{responsibilities}
     \item Provide support to users of the Kit including both teams and volunteers.
     \item Manage allocation of Support Kit.
-    \item Assess claims of broken Kit and authorise shipping of replacements where required.
+    \item Assess claims of broken Kit and authorise shipping of spare kit where required.
   \end{responsibilities}
 \end{roledesc}
 
