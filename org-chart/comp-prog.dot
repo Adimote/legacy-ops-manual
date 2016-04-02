@@ -14,7 +14,7 @@ digraph {
 	
 	# Kickstart Event Coordinator Subordinates
 	local_ks_event_coord[label="Local Kickstart\nEvent Coordinator" color=blue style=dashed contactsexclude=true];
-	activity_coord[label="Activity Coordinator" email="activity@studentrobotics.org"]
+	activity_coord[label="Activity Coordinator" email="kickstart-activity@studentrobotics.org"]
 
 	local_activity_coord[label="Local Activity\nCoordinator" color=blue style=dashed contactsexclude=true];
 	local_team_coord[label="Local Team\nCoordinator" color=blue style=dashed contactsexclude=true];

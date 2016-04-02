@@ -1,22 +1,22 @@
 digraph {
 	# Competition Coordinator Subordinates
-	comp_event_coord [label="Competition Event\nCoordinator" email="competition-event@studentrobotics.org"];
+	comp_event_coord [label="Competition Event\nCoordinator" email="comp-event@studentrobotics.org"];
 
 	# Competition Event Coordinator Subordinates
 	reward_manager[label="Reward\nManager" contactsexclude=true];
-	comp_volunteer_welfare[label="Competition Volunteer\nWelfare Coordinator" email="competition-welfare@studentrobotics.org"];
+	comp_volunteer_welfare[label="Competition Volunteer\nWelfare Coordinator" email="comp-welfare@studentrobotics.org"];
 	prod_manager[label="Production\nManager" email="production-manager@studentrobotics.org"];
-	comp_team_coord[label="Competition Team\nCoordinator" email="competition-teams@studentrobotics.org"];
-	comp_sw_coord[label="Competition Software\nCoordinator" email="competition-software@studentrobotics.org"];
-	comp_team_support_coord[label="Competition Team\nSupport Coordinator" email="competition-team-support@studentrobotics.org"];
-	comp_hs_coord[label="Competition H&S\nCoordinator" email="competition-health-and-safety@studentrobotics.org"];
+	comp_team_coord[label="Competition Team\nCoordinator" email="comp-teams@studentrobotics.org"];
+	comp_sw_coord[label="Competition Software\nCoordinator" email="comp-software@studentrobotics.org"];
+	comp_team_support_coord[label="Competition Team\nSupport Coordinator" email="comp-support@studentrobotics.org"];
+	comp_hs_coord[label="Competition H&S\nCoordinator" email="comp-health-and-safety@studentrobotics.org"];
 	comp_match_coord[label="Match\nCoordinator" email="matches@studentrobotics.org"];
 
 	# Game Volunteer Coordinator Subordinates
 	head_shepherd[label="Head Shepherd" email="shepherding@studentrobotics.org"];
-	commentators[label="Commentators" email="commentators@studentrobotics.org"];
-	head_match_scorer[label="Head Match\nScorer" email="match-scorer@studentrobotics.org"];
-	judges[label="Judges" email="judge@studentrobotics.org"];
+	commentators[label="Commentators" contactsexclude=true];
+	head_match_scorer[label="Head Match\nScorer" email="match-scoring@studentrobotics.org"];
+	judges[label="Judges" contactsexclude=true];
 
 	###### Connections between nodes
 	comp_event_coord -> { reward_manager comp_volunteer_welfare
