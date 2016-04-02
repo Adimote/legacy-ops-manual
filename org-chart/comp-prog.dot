@@ -1,6 +1,6 @@
 digraph {
 	####### Node declarations
-	comp_prog_coord [label="Competition Programme\nCoordinator" email="competition-program@studentrobotics.org"];
+	comp_prog_coord [label="Competition Programme\nCoordinator" email="comp-program@studentrobotics.org"];
 	
 	# Competition Coordinator Subordinates
 	comp_event_coord [label="Competition Event\nCoordinator" color=red penwidth=3 rolesexclude=true]; // Email and tel defined in comp-event.dot
