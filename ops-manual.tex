@@ -16,6 +16,24 @@
 
 \setlength{\parindent}{0pt}
 
+%%Create draft env. Delete once all draft content is removed.
+\usepackage{background}
+\usepackage{color}
+\newenvironment{draft}{
+  \clearpage\SetBgContents{Draft}
+  \begin{center}
+    \textcolor{red}{\textit{The following sections consist of notes. They are not complete or final as it is not currently a priority to be completed.}}
+  \end{center}
+}
+{
+  \vfill
+  \begin{center}
+    \textcolor{red}{\textit{End of notes.}}
+  \end{center}
+  \clearpage\SetBgContents{}
+}
+\SetBgContents{}
+
 %% Add metadata that describes the license of this document
 \include{cc-by-sa-4.0-international.xmp}
 
