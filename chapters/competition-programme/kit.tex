@@ -41,6 +41,44 @@ The Kit itself consists of many parts. These parts fall into the following categ
 To aid Student Robotics volunteers in the development of the Kit Development Kits are available. A Development Kit is identical to that provided to teams, but is reserved specifically for the purpose of development. There are also development tools available such as programmers and test jigs. The \role{kit-coord} is responsible for the allocation of Development Kits and tools. The \role{kit-logistics-coord} is responsible for the storage, tracking and shipping of Development Kits and tools.
 
 \subsubsection{Electronic and Mechanical Hardware}
+
+The development of electronic and mechanical parts of the kit is considered to be a very critical process, since they can only be changed once per Competition Programme Year. For this reason the process is somewhat more formal and rigorous than that of other kit parts, such as remote software. The desired outcome of this process is hardware that is robust, reliable and useful to teams.
+
+Upon completion of development of a new part it is expected that, along with all of the design files, documentation is provided for manufacturing, maintenance and use. Any new parts that require firmware to function must, as a minimum, have firmware that allows for remote updating.
+
+As in all engineering there are many conflicting factors to be optimised in the design of kit parts. While developing electronic and mechanical parts it is useful to keep the following factors in mind: ease of manufacture, ease of end of line test, ease of annual test, ease of use, ease of repair, robustness and cost. Note that these are in no particular order and all are important.
+
+Money is available to support the development and prototyping of new electronic and mechanical kit parts. It is also available to support the development of Kit related tools, such as test jigs. Before any money is allocated towards development a Kit Part Development Proposal must be reviewed and accepted by the \role{hw-dev-coord}. No money should be spent towards kit development with an expectation of reimbursement without an accepted Kit Part Development Proposal. Where a proposal has been accepted and money allocated, it is the responsibility of the named lead developer to ensure that the budget is not exceeded. The lead developer should be constant communication with the \role{hw-dev-coord} throughout the development process.
+
+The submission of a Kit Part Development Proposal is required when starting to develop a new electronic part, mechanical part or tool. The purpose of this proposal is twofold: it helps to ensure people don't waste their time and effort developing something that has little chance of being included in the Kit and it acts as a request for money to help with the development of the part. It is strongly advised that one talks to the \role{hw-dev-coord} before writing a proposal.
+
+A Kit Part Development Proposal must include:
+\begin{itemize}
+  \item The name of the lead developer.
+  \item A description of the item, including whether it is an electronic part, mechanical part or tool for internal use.
+  \item The functionality it provides to teams (if applicable).
+  \item Example user stories to allow later assessment of suitability to fulfil requirements.
+  \item An estimate of the development time required.
+  \item A development plan showing design review points.
+  \item If proposing the development of bespoke hardware, a review of COTS products providing similar functionality and reasons why these are not suitable.
+  \item The estimated development cost.
+  \item The estimated production cost per kit/per tool.
+  \item The estimated annual maintenance cost per kit, including consumable parts (if applicable).
+\end{itemize}
+
+An example Kit Part Development Proposal can be found in Appendix \emph{TODO: write example KPDP}.
+
+Once development is complete a Kit Addition Proposal must be submitted to the \role{kit-coord}. This Kit Addition Proposal acts as a final check of suitability before manufacturing/purchasing commences and the developed part is included in the Kit (or, in the case of newly developed tools, added to the set of development tools available) . The proposal must include:
+\begin{itemize}
+  \item A review of the original Kit Part Development Proposal showing how the developed part fulfils the user stories and provides the functionality specified.
+  \item Links to the source of the hardware/software developed including any new documentation.
+  \item A reviewed estimated production cost per kit/per tool. This will be more accurate than the initial estimate due to the design being complete.
+  \item A reviewed annual maintenance cost per kit (if applicable).
+  \item A manufacturing plan. If the new part is not fully manufactured, tested and entered into the inventory before the manufacturing deadline then it will not ship in the next competition year. \emph{TODO: link to manufacturing deadline}.
+\end{itemize}
+
+An example Kit Addition Proposal can be found in Appendix \emph{TODO: write example KAP}.
+
 \subsubsection{Kit Local Software}
 \subsubsection{Kit Remote Software}
 
@@ -54,52 +92,6 @@ To aid Student Robotics volunteers in the development of the Kit Development Kit
 
 \item Development Process
   \begin{enumerate}
-    \item Electronic and mechanical hardware
-      \begin{enumerate}
-        \item Money is available for new kit component development and prototyping.
-        \item The development of electronic and mechanical components is considered to be a very critical process since they can only be changed once per Competition Programme Year.
-        \item A new kit component proposal is required when starting to develop a new electronic or mechanical component. This proposal must include:
-          \begin{enumerate}
-            \item The name of the lead developer.
-            \item A description of the item.
-            \item The functionality it provides to teams.
-            \item Example user stories to allow later assessment of suitability to fulfil requirements.
-            \item An estimate of the development time required.
-            \item A development plan showing design review points.
-            \item A review of COTS products providing similar functionality and reasons why these are not suitable.
-            \item The estimated development cost.
-            \item The estimated production cost per kit.
-            \item The estimated annual maintenance cost per kit (including consumable parts).
-          \end{enumerate}
-        \item Proposals for new kit development must be reviewed and accepted by the \role{hw-dev-coord} before money is allocated for development.
-        \item Before proposing a new hardware component the \role{hw-dev-coord} should be consulted to ensure that it will be useful and suitable for inclusion in the kit.
-        \item Once development is completed a final kit addition proposal is required. This proposal must include:
-          \begin{enumerate}
-            \item A review of the original new kit component proposal showing how the developed item fulfils the user stories and provides the functionality specified.
-            \item Links to the source of the hardware/software developed including any new documentation.
-            \item A reviewed estimated production cost per kit. This will be more accurate than the initial estimate due to the design being complete.
-            \item A reviewed annual maintenance cost per kit.
-            \item A manufacturing plan. If the new component is not fully manufactured, tested and entered into the inventory before the manufacturing deadline then it will not ship in the next competition year. (TODO: link to manufacturing deadline).
-          \end{enumerate}
-        \item Final designs must be approved by the \role{kit-coord} before the new component is manufactured and added to the kit.
-        \item As with all engineering the hardware parts of the kit must be optimised for:
-          \begin{enumerate}
-            \item Ease of manufacture
-            \item Ease of initial test
-            \item Ease of annual testing
-            \item Ease of use
-            \item Ease of servicing/repair
-            \item Robustness
-            \item Cost
-          \end{enumerate}
-        \item The following documentation is required for new components:
-          \begin{enumerate}
-            \item Manufacturing.
-            \item Maintenance/servicing.
-            \item User.
-          \end{enumerate}
-        \item New components that require firmware to function must have firmware that allows remote updating as a minimum to be accepted for inclusion into the kit.
-      \end{enumerate}
     \item Kit local software
       \begin{enumerate}
         \item Kit local software includes all software, written and maintained by SR, that runs on components of the kit. This includes firmware.
