@@ -5,20 +5,44 @@
 
 The purpose of the Student Robotics Competition Programme is to foster interest in engineering. However, the vast majority of competitors will never have engineered any software, mechanics or electronics. Asking them to build a robot from scratch, without support in each of these areas, would not help. It would not be an enjoyable experience and may even have the opposite effect to that desired.
 
-To support teams in the three key areas of mechanical, electronic and software we provide them with a kit. The purpose of this kit is to make it feasible for completely inexperienced teams to build robots capable of competing in the Competition. It is expected that some teams will develop robots using more than the provided kit and this is encouraged, if their mentor feels that they have the necessary capabilities and experience.
+To support teams in the three key areas of mechanical, electronic and software we provide them with a kit. The purpose of this kit is to make it feasible for completely inexperienced teams to build robots capable of competing in the Competition. It is expected that some teams will develop robots using more than the provided kit and this is encouraged if their mentor feels that they have the necessary capabilities and experience.
 
-Teams are not required to use the kit to compete. They may build their robot using what ever materials they desire, provided that they, and the final robot, are safe. In some situations teams may have to get prior approval from Student Robotics regarding use of certain non-kit parts. Any approval requirements will be detailed in the rules provided to teams at Kickstart. \emph{TODO: link to section}
+Teams are not required to use the kit to compete. They may build their robot using whatever materials they desire, provided that they, and the final robot, are safe. In some situations teams may have to get prior approval from Student Robotics regarding use of certain non-kit parts. Any approval requirements will be detailed in the rules provided to teams at Kickstart. \emph{TODO: link to section}
 
 \subsubsection{Minimum Viable Robot}
 
-The kit provided by Student Robotics must provide teams with all of the parts, both physical and virtual, to allow them to easily construct a minimum viable robot - a robot which is capable of competing within the game. This minimum viable robot significantly lowers the barrier to entry and also allows teams to focus on the elements of their robot that interest them the most. The minimum viable robot will allow them to compete, but their own original work is what will help them to win.
+The kit provided by Student Robotics must provide teams with all of the parts, both physical and virtual, to allow them to easily construct a Minimum Viable Robot (MVR) - a robot which is capable of competing within the game. This MVR significantly lowers the barrier to entry and also allows teams to focus on the elements of their robot that interest them the most. The MVR will allow them to compete, but their own original work is what will help them to win.
 
-The process for assembling the kit into a minimum viable robot must be straightforward. It should require a similar level of skill as is required to assemble a piece of flatpack furniture. This will allow teams to rapidly obtain a robot with which they could compete.
+The process for assembling the kit into an MVR must be straightforward. It should require a similar level of skill as is required to assemble a piece of flatpack furniture. This will allow teams to rapidly obtain a robot with which they could compete.
 
-Building the minimum viable robot is a significant milestone for a team. At this point they are ready to compete. After this point teams should be strongly encouraged to maintain this state as they develop their robot further. At any point in time after this it should take very little effort to present a robot that is suitable for use in the Competition.
+Building the MVR is a significant milestone for a team. At this point they are ready to compete. After this point teams should be strongly encouraged to maintain this state as they develop their robot further. At any point in time after this it should take very little effort to present a robot that is suitable for use in the Competition.
 
-The kit should not be designed with the sole purpose of building the minimum viable robot in mind. It should consists of composable modules that can be used by teams designing a robot from scratch. The minimum viable robot is just one combination of these modules and does not necessarily use all of the kit in its construction.
+The kit should not be designed with the sole purpose of building the MVR in mind. It should consist of composable modules that can be used by teams designing a robot from scratch. The MVR is just one combination of these modules and does not necessarily use all of the kit in its construction.
+
+\subsubsection{Kit Requirements}
+
+As well as allowing an MVR to be constructed the Kit should meet some other general criteria. It should be:
+
+\begin{enumerate}
+  \item Enjoyable for teams to use.
+  \item As close to the state of the art as possible.
+  \item Be rugged and robust to accidental damage.
+  \item Consist of commercial off the shelf parts where appropriate.
+\end{enumerate}
+
+These requirements help to ensure that the Kit has significant value to teams while ensuring that the cost to Student Robotics is reasonable.
+
 \subsection{Development}
+
+To meet our requirement of providing teams with a Kit all parts of it must be developed before being handed to teams. This development includes the design and creation of new pieces of hardware and software and the research and evaluation of existing hardware and software prior to inclusion in the Kit. The \role{hw-dev-coord} and \role{kit-sw-coord} are responsible for the development of the hardware and software parts of the kit respectively, however the \role{kit-coord} is ultimately responsible for deciding what is included in the Kit.
+
+The Kit itself consists of many parts. These parts fall into the following categories: electronic hardware, mechanical hardware, local software and remote software. Some parts of the kit are considered to be more critical than others and this is represented in the relevant development processes documented below.
+
+To aid Student Robotics volunteers in the development of the Kit Development Kits are available. A Development Kit is identical to that provided to teams, but is reserved specifically for the purpose of development. There are also development tools available such as programmers and test jigs. The \role{kit-coord} is responsible for the allocation of Development Kits and tools. The \role{kit-logistics-coord} is responsible for the storage, tracking and shipping of Development Kits and tools.
+
+\subsubsection{Electronic and Mechanical Hardware}
+\subsubsection{Kit Local Software}
+\subsubsection{Kit Remote Software}
 
 \subsection{Manufacture}
 
@@ -28,26 +52,6 @@ The kit should not be designed with the sole purpose of building the minimum via
 
 \begin{enumerate}
 
-
-\item The philosophy behind the kit:
-
-  \begin{enumerate}
-    \item The kit should be enjoyable for teams to use.
-
-    \item The kit should be as close to the state of the art as possible.
-
-    \item The kit must be rugged and robust to accidental damage.
-    \item{Consist of commercial off the shelf (COTS) parts where appropriate.}
-  \end{enumerate}
-\item Development philosophy
-  \begin{enumerate}
-    \item The kit consists of many components. The components fall into the following categories: electronic hardware, mechanical hardware, kit local software and kit remote software.
-    \item It is expected that teams will directly interact with all components of the kit therefore usability and documentation is critical.
-    \item Some parts of the kit are more critical than others and this is represented in the development processes for the various types of kit component.
-    \item Development kits are available to aid with the development of new components. A development kit consists of the same set of components provided to teams.
-    \item There are also development tools available such a programmers and test jigs.
-    \item The \role{kit-coord} is responsible for assigning development kits and tools. The \role{kit-logistics-coord} is responsible for the storage, tracking and shipping of development kits and tools.
-  \end{enumerate}
 \item Development Process
   \begin{enumerate}
     \item Electronic and mechanical hardware
