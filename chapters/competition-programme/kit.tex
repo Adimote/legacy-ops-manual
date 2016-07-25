@@ -85,7 +85,25 @@ Kit Local Software includes all software written and maintained by Student Robot
 A very small amount of Kit Local Software cannot be updated during the competition year, such as bootloaders. These highly critical parts have a more strict procedure controlling their modification. It is the responsibility of the \role{kit-sw-coord} to define which software components are highly critical and changes to these parts must be reviewed and approved by them.
 
 \subsubsection{Kit Remote Software}
+Kit Remote Software includes all software, written and maintained by SR, that is used by teams in the process of building their robot, excluding the software that falls under the definition of Kit Local Software. The development of Kit Remote Software is considered to be the least critical process since it is reasonably trivial to update it throughout the Competition Programme Year.
 
+All Kit Remote Software should provide an API. The API should be the only way that other Student Robotics software interacts with it. It should be expected that teams will be using the API too, so it should be well documented.
+
+\subsubsection{General Software Development}
+In the case of both Kit Local and Kit Remote software one should consult the \role{kit-sw-coord} before starting development of a new feature or piece of software to discuss its usefulness and how it will integrate into the existing infrastructure. Also, each piece of software, as defined by the \role{kit-sw-coord}, must maintain the following documentation alongside the source code:
+\begin{itemize}
+  \item A description of the piece of software, including its scope and how/where it will interface with the existing infrastructure.
+  \item A list/review of any potential legal implications. E.g. data protection.
+\end{itemize}
+Prior to the release of a new version of a given piece of software the \role{kit-coord} must verity that there are no new potential legal implications due to the new features and that all of the existing potential legal implications have been suitably dealt with.
+
+The APIs of all Kit software must remain stable for the duration of the Competition Programme Year. That is, from Kickstart to the Kit return deadline. API stability is defined as:
+\begin{itemize}
+  \item Methods/interfaces must not be renamed without providing a backwards compatible alias.
+  \item The functionality of methods/interfaces must remain the same.
+  \item New methods/interfaces must not affect the functionality of existing methods/interfaces.
+\end{itemize}
+The APIs of Kit software may change in a non-backwards compatible way outside of the Competition Programme Year, i.e., from the Kit return deadline of one year to the Kickstart of the following year.
 \subsection{Manufacture}
 
 \subsection{Life Cycle}
@@ -95,32 +113,6 @@ A very small amount of Kit Local Software cannot be updated during the competiti
 \begin{enumerate}
 
 \item Development Process
-  \begin{enumerate}
-    \item Kit remote software
-      \begin{enumerate}
-        \item Kit remote software includes all software, written and maintained by SR, that is used by teams in the process of developing their robot that does not run on the components of the Kit.
-        \item The development of Kit remote software is the least critical of all Kit components since it is reasonably trivial to update it throughout the year.
-        \item Before starting development of a new feature or piece of software the \role{kit-sw-coord} should be consulted to ensure that it will be useful and how it may be incorporated into the existing infrastructure.
-        \item All Kit remote software should provide an API. The API should be the only way that other SR software interacts it. It should be expected that teams will be using the API.
-      \end{enumerate}
-    \item General software development
-      \begin{enumerate}
-        \item Each piece of software, as defined by the \role{kit-sw-coord}, must maintain the following documentation alongside the source code:
-          \begin{enumerate}
-            \item A description of the piece of software, including its scope and how/where it will interface with existing software.
-            \item Any potential legal implications.
-          \end{enumerate}
-        \item Prior to the release of a new version of the software the \role{kit-coord} must verify that there are no new potential legal implications due to the new features and that all of the existing potential legal implications have been suitably dealt with.
-        \item APIs of all Kit software must remain stable for the duration of the Competition Programme Year. That is, from Kickstart to the Kit return deadline.
-        \item API stability is defined as:
-          \begin{enumerate}
-            \item Methods/interfaces must not be renamed without providing a backwards compatible alias.
-            \item The functionality of methods/interfaces must remain the same.
-            \item New methods/interfaces must not affect the functionality of existing methods/interfaces.
-          \end{enumerate}
-      \end{enumerate}
-  \end{enumerate}
-
 \item Manufacture
   \begin{enumerate}
     \item Responsibility of \role{hw-prod-coord} to get newly developed bits of Kit manufactured/purchased ready for inclusion in the Kit.
